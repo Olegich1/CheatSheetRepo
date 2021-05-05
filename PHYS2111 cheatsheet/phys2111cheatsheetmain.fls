@@ -1,6 +1,6 @@
-PWD c:\Users\joeyl\OneDrive\Desktop\Uni\LaTeX\PHYS2111 cheatsheet
+PWD c:\Users\joeyl\OneDrive\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS2111 cheatsheet
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\joeyl\OneDrive\Desktop\Uni\LaTeX\PHYS2111 cheatsheet\phys2111cheatsheetmain.tex
+INPUT c:\Users\joeyl\OneDrive\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS2111 cheatsheet\phys2111cheatsheetmain.tex
 OUTPUT phys2111cheatsheetmain.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
