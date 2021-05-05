@@ -1,0 +1,150 @@
+\documentclass[a4paper]{article}
+\usepackage{amsfonts, amsmath, amssymb, physics}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{indentfirst}
+
+%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0em}
+\newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{PHYS2111 Cheat Sheet}
+\author{Moisty Eyes}
+\date{April 2021}
+\begin{document}
+\maketitle
+\section{Formula Sheet}
+\subsection{Expectation Value}
+
+
+\par Expectation value of function \(f(x)\) subject to \(\Psi(x,t)\)
+\[
+    \mathbb{P}(f(x))=\int_{-\infty}^{\infty}f(x)\norm{\Psi(x,t)}^{2}\dmr{x}.
+\]
+Note that the Hamiltonian operator $H$ is 
+\[
+    H = -\frac{\hbar^2}{2m}\pdv[2]{x} + V(x,t),    
+\]
+and the expectation value of the energy $\langle H \rangle$ is
+\begin{align*}
+    \langle H \rangle &= \left\langle -\frac{\hbar^2}{2m}\pdv[2]{x} + V(x,t) \right\rangle\\
+    &= \int_{-\infty}^{\infty} \Psi^{*}(x,t) \left(-\frac{\hbar^2}{2m}\pdv[2]{x} + V(x,t)\right) \Psi(x,t)\dmr{x}.
+\end{align*}
+
+\subsection{Poisition and Momentum Operators}
+\par The position operator,
+\[
+    \hat{x} = x.
+\]
+\par The momentum operator,
+\[
+    \hat{p} = -i\hbar \pdv{x}.
+\]
+
+\subsection{The Infinite Square Well}
+\par Time Dependent Schrodinger's Equation
+\[
+    \Psi(x,t) =  \sum_{n=1}^{\infty}c_{n}\sqrt{\frac{2}{a}}\sin\left(\frac{n\pi}{a}x\right)\exp\left(-i E_{n} t\right).
+\]
+with constant
+\[
+    c_n = \sqrt{\frac{2}{a}}\int_{0}^{a}\sin\left(\frac{n\pi}{a}x\right)\Psi(x,0)\dmr{x}.
+\]
+and allowed energy
+\[
+    E_{n} = \frac{n^2\pi^2\hbar^2}{2ma^2}.
+\]
+
+\subsection{The Harmonic Oscillator}
+\par A harmonica oscillator has potential energy
+\begin{equation*}
+    V(x) = \frac12 m \omega^2 x^2.
+\end{equation*}
+With ground state $\psi_{0}(x)$ 
+\[
+    \psi_0(x)=\left(\frac{m \omega}{\pi \hbar}\right)^{\frac{1}{4}}\exp\left(-\frac{m \omega}{2\hbar}x^2\right).
+\]
+The ladder operator
+\[
+    a_{\pm}=\frac{1}{\sqrt{2\hbar m \omega}}(\mp i \hat{p}+m\omega x)\tag{$\omega = \sqrt{\frac{k}{m}}$},
+\]
+and to extract the n-th state with the ladder operator
+\[
+    \psi_{n}(x)=A_n(\hat{a}_{+})^{n}\psi_{0}(x).
+\]
+
+\subsection{The Free Particle}
+The initial condition can be expressed in the Fourier $k$ space,
+\[
+    \phi(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)\exp(-ikx)\dmr{x} \tag{\(k = \frac{\sqrt{2mE}}{\hbar}\)},
+\]
+we can then use this $\phi(k)$ calculated above to determine the time dependent wave equation for the free particle
+\[
+    \Psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)\exp\left(i\left(kx-\frac{\hbar k^2}{2m}t\right)\right)\dmr{k}.
+\]
+Notably, the particle has a phase velocity and a group velocity,
+\begin{align*}
+    v_{\text{phase}}=\frac{\omega}{k}, && v_{\text{group}}=\dv{\omega}{k}.\tag{$\omega = \frac{\hbar k^2}{2m}$}
+\end{align*}
+Also note that 
+\[
+    v_{\text{group}} = v_{\text{classical}}.
+\]
+
+\par For a free particle, note that the potential energy is zero namely \(V(x,t)=0\). Also note that we can switch from the Fourier $k$ space and the momentum $p$ space (\(p = \hbar k\)), obtaining the following
+\[
+    \phi(p) = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\Psi(x,0)\exp(-\frac{ip}{\hbar}x)\dmr{x},
+\]
+and
+\[
+    \Psi(x,t) = \frac{1}{\sqrt{2 \pi\hbar }}\int_{-\infty}^{\infty} \phi(p) \exp \left(\frac{ip}{\hbar}x\right)\exp\left(\frac{-i E t}{\hbar}\right) \dmr{p}\tag{$E = \frac{\hbar^2k^2}{2m}$}
+\]  
+
+\subsection{The Delta-Function Potential}
+\par The delta function well has \textbf{only one} bound state (for $\alpha > 0$) namely
+\[
+    \phi(x) = \frac{\sqrt{m\alpha}}{\hbar}\exp\left(\frac{-m\alpha\abs*{x}}{\hbar}\right),    
+\]
+with \textbf{only one} allow energy
+\[
+    E = -\frac{m\alpha^2}{\hbar}.
+\]
+
+\par The reflection coefficient $R$ and the transmission coefficient $T$ can be expressed as the following
+\begin{align*}
+    R = \frac{1}{1+\frac{2\hbar^2E}{m\alpha^2}}, &&  T = \frac{1}{1+\frac{m\alpha^2}{2\hbar^2E}}.
+\end{align*}
+
+\subsection{The Finite Squre Well}
+\par The finite squre well has the potential function such that (note that this is a flipped tophat function),
+\[
+    V(x) = 
+        \begin{cases}
+            -V_{0} & \text{if } -a \leq x \leq a,\\
+            0 & \text{if } \abs*{x} > a.
+        \end{cases}    
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%% TO DO LIST %%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{TO DO LIST}
+\begin{itemize}
+    \item Finishing up the finite square well
+    \item proof read
+    \item 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
