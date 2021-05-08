@@ -64,7 +64,7 @@ and allowed energy
 \subsection{The Harmonic Oscillator}
 \par A harmonica oscillator has potential energy
 \begin{equation*}
-    V(x) = \frac12 m \omega^2 x^2.
+    V(x) = \frac12 m \omega^2 x^2,
 \end{equation*}
 With ground state $\psi_{0}(x)$ 
 \[
@@ -76,9 +76,12 @@ The ladder operator
 \]
 and to extract the n-th state with the ladder operator
 \[
-    \psi_{n}(x)=A_n(\hat{a}_{+})^{n}\psi_{0}(x).
+    \psi_{n}(x)=A_n(\hat{a}_{+})^{n}\psi_{0}(x),
 \]
-
+with 
+\[
+    E_{n} = \left(n+\frac12\right).   
+\]
 \subsection{The Free Particle}
 The initial condition can be expressed in the Fourier $k$ space,
 \[
@@ -113,7 +116,7 @@ and
 \]
 with \textbf{only one} allow energy
 \[
-    E = -\frac{m\alpha^2}{\hbar}.
+    E = -\frac{m\alpha^2}{2\hbar^2}.
 \]
 
 \par The reflection coefficient $R$ and the transmission coefficient $T$ can be expressed as the following
@@ -130,8 +133,11 @@ with \textbf{only one} allow energy
             0 & \text{if } \abs*{x} > a.
         \end{cases}    
 \]
-
-
+\par For scattering states, the energy for perfect transmission is given by 
+\[
+    E_{n}+V_{0} = \frac{n^2\pi^2\hbar^2}{2m(2a)^2}.
+\]  
+Note that is also the allowed eneries for the infinite square well.
 
 
 
@@ -143,12 +149,9 @@ with \textbf{only one} allow energy
 
 
 %%%%%%%%%%%%%%%%%% TO DO LIST %%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section*{TO DO LIST}
-\begin{itemize}
-    \item Finishing up the finite square well
-    \item proof read
-    \item 
-\end{itemize}
+%\newpage
+%\section*{TO DO LIST}
+%\begin{itemize}
+%\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
