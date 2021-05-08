@@ -62,7 +62,7 @@ and allowed energy
 \]
 
 \subsection{The Harmonic Oscillator}
-\par A harmonica oscillator has potential energy
+\par A harmonic oscillator has potential energy
 \begin{equation*}
     V(x) = \frac12 m \omega^2 x^2,
 \end{equation*}
@@ -80,7 +80,7 @@ and to extract the n-th state with the ladder operator
 \]
 with 
 \[
-    E_{n} = \left(n+\frac12\right).   
+    E_{n} = \left(n+\frac12\hbar\omega\right).   
 \]
 \subsection{The Free Particle}
 The initial condition can be expressed in the Fourier $k$ space,
@@ -158,7 +158,7 @@ Note that is also the allowed eneries for the infinite square well.
     \textbf{The Fundamental Theorem}
 \end{flushleft}
 \begin{enumerate}
-    \item If $\lambda_1$ and $\lambda_2$ are two unequal egigen values of a Hermitian operator, then the corresponding eigenvectors are orthogonal.
+    \item If $\lambda_1$ and $\lambda_2$ are two unequal eigenvalues of a Hermitian operator, then the corresponding eigenvectors are orthogonal.
     \item Even if $\lambda_1 = \lambda_2$, the coreresponding eigenvectors can be chosen to be orthogonal. We use the term degeneracy to describe the case where two different eigenvectors have the same eigenvalue. $\lambda_1$ and $\lambda_2$ are referred to as degenerate.
     \item The eigenvectors of a Hermitian operator are a complete set, i.e. any vector the operator can generate can be expanded as a sum of its eigenvectors.
 \end{enumerate}
@@ -190,9 +190,13 @@ if $P \neq 0,$ then $\langle \sigma_A \rangle$ unrelated to $\langle \sigma_B \r
 \[
     \mathbb{P}(a,b) = \mathbb{P}(a) \mathbb{P}(b).
 \]  
-
-
-
+\subsubsection{The Cauchy-Swarz Inequality}
+It states that 
+\[
+    \braket{A}{A}\braket{B}{B} \geq \abs*{\braket*{A}{B}}^2.
+\]  
+\subsection{Commutators}
+For some $[L,M]=LM-ML$, if $[L, M] = 0$, then $L$ and $M$ commute and therefore there can exist a zero undertainty (we can know both of the observable precisely).
 
 
 
