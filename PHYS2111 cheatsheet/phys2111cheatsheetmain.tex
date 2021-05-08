@@ -139,6 +139,68 @@ with \textbf{only one} allow energy
 \]  
 Note that is also the allowed eneries for the infinite square well.
 
+\newpage
+\section{Formalism}
+\subsection{Hermitian Matrices}
+\begin{flushleft}
+    \textbf{Properties of Hermitian Matrices}:
+\end{flushleft} 
+\begin{enumerate}
+    \item The diagonal elements are real, as they must be their complex conjugate.
+    \item The off-diagonal symmetric pairs must be complex conjugates $m_{ij} = m_{ji}^{*}$. If they are real, then they will be equal.
+    \item Hermitian matrices are \textbf{normal}, i.e. $M^{\dagger}M = MM^{\dagger}$, and therefore \textbf{diagonalizable}, which means they can be transformed such that all off-diagonal elements are zero.
+    \item The sum of any two Hermitian matrices is also Hermitian.
+    \item The determinant of a Hermitian matrix is real.
+\end{enumerate}
+
+\subsection{Fundamental Theorem of Quantum Mechanics}
+\begin{flushleft}
+    \textbf{The Fundamental Theorem}
+\end{flushleft}
+\begin{enumerate}
+    \item If $\lambda_1$ and $\lambda_2$ are two unequal egigen values of a Hermitian operator, then the corresponding eigenvectors are orthogonal.
+    \item Even if $\lambda_1 = \lambda_2$, the coreresponding eigenvectors can be chosen to be orthogonal. We use the term degeneracy to describe the case where two different eigenvectors have the same eigenvalue. $\lambda_1$ and $\lambda_2$ are referred to as degenerate.
+    \item The eigenvectors of a Hermitian operator are a complete set, i.e. any vector the operator can generate can be expanded as a sum of its eigenvectors.
+\end{enumerate}
+
+\par A \textbf{distillation} of the above: For any observable, we have an operator, the eigenvectors of that operator will be the basis for the vector space we operate in.
+
+\begin{flushleft}
+    \textbf{The Principles}
+\end{flushleft}
+\begin{enumerate}
+    \item The observable or measurable quantities of quantum mechanics are represented by linear opertors $\mathbf{L}$, with $\lambda_i,\, \ket{\lambda_i}$ as its eigenvalue and eigenvector respectively.
+    \item The possible results of a measuremeant are the eigenvalues of the operator that represents the observable.
+    \item unambiguously distinguishable states are representsed by orthogonal vectors.
+    \item if $\ket{A}$ is the state-vector of a system, and the observable $\mathbf{L}$ is measured, the probability to observe value $\lambda_i$ is 
+    \[
+        \mathbb{P}(\lambda_i) = \norm{\bra{A}\ket{\lambda_i}}^2=\bra{A}\ket{\lambda_i}\bra{\lambda_i}\ket{A}    
+    \]
+\end{enumerate}
+
+\subsection{Recalling on Statistics}
+\subsubsection{Statitical Correlation}
+Consider 
+\[
+    P = \langle \sigma_A \sigma_B \rangle - \langle \sigma_A \rangle \langle \sigma_B \rangle,
+\]
+if $P \neq 0,$ then $\langle \sigma_A \rangle$ unrelated to $\langle \sigma_B \rangle$, else they are related.\\
+
+\par For event $a$ and $b$ to be independent,
+\[
+    \mathbb{P}(a,b) = \mathbb{P}(a) \mathbb{P}(b).
+\]  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,9 +211,5 @@ Note that is also the allowed eneries for the infinite square well.
 
 
 %%%%%%%%%%%%%%%%%% TO DO LIST %%%%%%%%%%%%%%%%%%%%%%
-%\newpage
-%\section*{TO DO LIST}
-%\begin{itemize}
-%\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

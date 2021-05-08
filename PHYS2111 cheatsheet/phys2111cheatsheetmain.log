@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.28)  7 MAY 2021 20:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.28)  8 MAY 2021 16:03
 entering extended mode
 **"c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex"
 (c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex
@@ -148,19 +148,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/joeyl/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] (phys2111cheatsheetmain.aux) ) 
+{C:/Users/joeyl/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
+
+ []
+
+[5] (phys2111cheatsheetmain.aux) ) 
 Here is how much of TeX's memory you used:
- 2986 strings out of 479321
- 38948 string characters out of 2866501
+ 2990 strings out of 479321
+ 38986 string characters out of 2866501
  356558 words of memory out of 3000000
- 20442 multiletter control sequences out of 15000+600000
- 411293 words of font info for 58 fonts, out of 8000000 for 9000
+ 20444 multiletter control sequences out of 15000+600000
+ 411912 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,12n,89p,444b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on phys2111cheatsheetmain.pdf (3 pages, 150750 bytes).
+Output written on phys2111cheatsheetmain.pdf (5 pages, 164191 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1620384388 "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" "phys2111cheatsheetmain.pdf" "phys2111cheatsheetmain" 1620384390
+["pdflatex"] 1620453812 "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" "phys2111cheatsheetmain.pdf" "phys2111cheatsheetmain" 1620454511
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233948248 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233948248 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233948254 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -10,6 +10,8 @@
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233948254 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136761453 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136761453 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmbx5.tfm" 1136761453 1332 f817c21a1ba54560425663374f1b651a ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmbx7.tfm" 1136761453 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136761453 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136761453 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136761453 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -61,10 +63,10 @@
   "C:/Users/joeyl/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1619533149 9514659 d4eec6578edb3a0b91a1e583d061bce7 ""
   "C:/Users/joeyl/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1619533144 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/joeyl/AppData/Roaming/MiKTeX/tex/latex/physics/physics.sty" 1355998462 29610 a9597219b282d9c78b02393dcd7d4322 ""
-  "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" 1620384387 4944 3c2902864d4195cf4a5a0c76ddb1a7de ""
-  "phys2111cheatsheetmain.aux" 1620384388 1026 d4b52c5a3a4c0a0b3df66ddd0ed0e75c "pdflatex"
-  "phys2111cheatsheetmain.tex" 1620384387 4944 3c2902864d4195cf4a5a0c76ddb1a7de ""
+  "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" 1620454508 7719 36044e51b14f0679381151422ac670dd ""
+  "phys2111cheatsheetmain.aux" 1620453813 1603 c8f278f308d9f3ad52efabde8f44622c "pdflatex"
+  "phys2111cheatsheetmain.tex" 1620454508 7719 36044e51b14f0679381151422ac670dd ""
   (generated)
-  "phys2111cheatsheetmain.log"
   "phys2111cheatsheetmain.aux"
   "phys2111cheatsheetmain.pdf"
+  "phys2111cheatsheetmain.log"
