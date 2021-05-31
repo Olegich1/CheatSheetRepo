@@ -1,0 +1,12 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction to Lagrangian Mechanics}{3}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Action}{3}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}The Euler-Lagrange Equation}{3}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.2.1}Example}{3}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {}References}{4}{}%

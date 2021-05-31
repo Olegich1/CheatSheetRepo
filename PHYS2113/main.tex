@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+\usepackage{amsfonts, amsmath, amssymb, physics}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{indentfirst}
+\usepackage[backend=biber, citestyle=nature]{biblatex}
+\usepackage[nottoc]{tocbibind}
+\addbibresource{ref.bib}
+
+%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0em}
+\newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{PHYS2113 Classical Mechanics}
+\author{Joey Liang}
+\date{May 2021}
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduction to Lagrangian Mechanics}
+
+\subsection{Action}
+\begin{definition}[Action]
+    Action, termed $A$, is defined as
+    \begin{equation}
+        A = \int_{t_0}^{t_1} L \dmr{t}.
+    \end{equation}
+    Where $L(q,\dot{q}) = T - V = \frac12 m \dot{q}^2 - V(q)$ is what we call the Lagrangian.
+\end{definition}
+\par Note that action represents the integral over time of the Lagrangian which can be thought as the motion of the object at some point of time.\cite{noauthor_action_2021}
+
+\subsection{The Euler-Lagrange Equation}
+\begin{definition}[The Euler-Lagrange Equation]
+    The Euler-Lagrange equation for a system with a single degree of freedom is
+    \[
+        \dv{t}\pdv{L}{\dot{q}} - \pdv{L}{q} = 0.
+    \]
+\end{definition}
+
+\subsubsection{Example}
+Refer to Taylor's\footnote{The book `Classical Mechanics' By John R. Taylor} \textbf{Example 6.2} on page 222.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{References}
+\addcontentsline{toc}{section}{\protect\numberline{}References}%
+\printbibliography[heading = none]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
