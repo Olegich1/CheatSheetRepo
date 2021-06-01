@@ -5,15 +5,24 @@
 \usepackage{indentfirst}
 \usepackage[backend=biber, citestyle=nature]{biblatex}
 \usepackage[nottoc]{tocbibind}
-\addbibresource{ref.bib}
+\usepackage{halloweenmath}
+
 
 %%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0em}
+
 \newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
+\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy intergral command
+
+
 \newtheorem{definition}{Definition}[section]
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{remark}{Remark}[subsubsection]
 
+\numberwithin{equation}{subsection}
+
+\addbibresource{ref.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{PHYS2113 Classical Mechanics}
@@ -41,13 +50,71 @@
 \subsection{The Euler-Lagrange Equation}
 \begin{definition}[The Euler-Lagrange Equation]
     The Euler-Lagrange equation for a system with a single degree of freedom is
-    \[
+    \begin{equation}
         \dv{t}\pdv{L}{\dot{q}} - \pdv{L}{q} = 0.
-    \]
+    \end{equation}
 \end{definition}
 
+\subsubsection{Derivation}
+We want to find a generalised solution for the path that minimises the variational problem integral
+\begin{equation}
+    S = \int_{x_1}^{x_2} f[y(x),y'(x),x]\dmr{x}.
+\end{equation}
+
+First, let's start off by defining that the `right' path (path with the least action/that minimise the variational problem) to be $y = y(x)$, and the wrong path is just a variation of the right path known as $Y(y(x),\alpha,\eta(x)) = y(x)+\alpha\eta(x)$. 
+
+Since the end points of the right path and the wrong path are the same we get
+\begin{equation}
+    \eta(x_1) = \eta(x_2) = 0.\label{2}    
+\end{equation}
+
+Now, the vairational problem interval in terms of the wrong path $S_0$ would be
+\begin{align}
+    S_0 &= \intt{x_1}{x_2} f(Y,Y',x) \dmr{x} \nonumber \\
+    &= \intt{x_1}{x_2} f(y+\alpha \eta, y' + \alpha \eta', x)dx.
+\end{align}
+
+Note that the only difference between integral $S$ and $S_0$ is the dependence on $\alpha$. So, idealy to minimise this integral, we would find the stationary point of $S_0$ in terms of $\alpha$, this can be expressed as 
+\begin{align}
+    \dv{S_0}{\alpha} &= 0 \nonumber \\
+    &= \intt{x_1}{x_2} \pdv{f}{\alpha} \dmr{x} \nonumber \\
+    &= \intt{x_1}{x_2} \left(\eta \pdv{f}{y} + \eta' \pdv{f}{y'} \right) \dmr{x}.\label{1}
+\end{align}
+
+And now, using \eqref{2} and integration by parts, we obtain the following
+\begin{equation}
+    \intt{x_1}{x_2}\eta(x)\left(\pdv{f}{y}-\dv{x}\pdv{f}{y'}\right) = 0.
+\end{equation}
+For non-trivial solution, we must have 
+\[
+    \pdv{f}{y}-\dv{x}\pdv{f}{y'},
+\]
+which is the Euler-Lagrange Equation.
+
+\begin{remark}
+    Note that for \eqref{1}, the following needs to be true for $Y = y + \alpha \eta$;
+    \[
+        \pdv{}{Y} f(Y,Y',x) = \pdv{}{y} f(y+\alpha \eta, y'+\alpha \eta', x).
+    \]
+    The proof is simple,
+    \begin{align*}
+        \pdv{}{y} f(y+\alpha \eta, y'+\alpha \eta', x) &= f'(y+\alpha \eta, y'+\alpha \eta', x)) \\
+        &= f'(Y, Y', x).
+    \end{align*}
+\end{remark}
+
+
+
+
+
+
+
+
+
+
 \subsubsection{Example}
-Refer to Taylor's\footnote{The book `Classical Mechanics' By John R. Taylor} \textbf{Example 6.2} on page 222.
+Refer to Taylor's\footnote{The book `Classical Mechanics'\cite{TaylorJohnR.JohnRobert2005Cm} By John R. Taylor} \textbf{Example 6.2} on page 222.
+
 
 
 

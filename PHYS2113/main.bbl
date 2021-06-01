@@ -46,6 +46,38 @@
       \verb https://en.wikipedia.org/w/index.php?title=Action_(physics)&oldid=1020785959
       \endverb
     \endentry
+    \entry{TaylorJohnR.JohnRobert2005Cm}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c43c8a55c8e4fa7701d9a443e12b8623}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelimb R.\bibnamedelimi (John\bibnamedelima Robert)},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Sausalito, Calif. : [Basingstoke}%
+      }
+      \list{publisher}{1}{%
+        {University Science Books ; Palgrave, distributor]}%
+      }
+      \strng{namehash}{c43c8a55c8e4fa7701d9a443e12b8623}
+      \strng{fullhash}{c43c8a55c8e4fa7701d9a443e12b8623}
+      \strng{bibnamehash}{c43c8a55c8e4fa7701d9a443e12b8623}
+      \strng{authorbibnamehash}{c43c8a55c8e4fa7701d9a443e12b8623}
+      \strng{authornamehash}{c43c8a55c8e4fa7701d9a443e12b8623}
+      \strng{authorfullhash}{c43c8a55c8e4fa7701d9a443e12b8623}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{189138922X}
+      \field{title}{Classical mechanics}
+      \field{year}{2005}
+      \keyw{Mechanics}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
