@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+\usepackage{amsfonts, amsmath, amssymb, physics}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{indentfirst}
+\usepackage[backend=biber, citestyle=nature]{biblatex}
+\usepackage[nottoc]{tocbibind}
+\usepackage{halloweenmath}
+
+
+%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0em}
+
+\newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
+\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy intergral command
+
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{remark}{Remark}[subsubsection]
+
+\numberwithin{equation}{subsection}
+
+\addbibresource{ref.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{PHYS2114 Cheat Sheet}
+\date{June 2021}
+\author{Joey Liang}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Mathematics Preliminary}
+\subsection{IMPORTANT NOTE}
+The following notations are taken from Griffth's `Introduction to Electromachenics'.\cite{Griffiths:611579}
+
+Where as the line, area and volume integral elements are the following;
+\begin{itemize}
+    \item Line integral element: $\dmr{\vec{l}}.$
+    \item Area integral element: $\dmr{\vec{a}}.$ 
+    \item Volume integral element: $\dmr{\tau}.$
+\end{itemize}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Cartesian Coordinates}
+The line and volume integral elements are
+\begin{align*}
+    \dmr{\vec{l}} &= \hat{x}\dmr{x} + \hat{y}\dmr{y} + \hat{z}\dmr{z}, & \dmr{\tau} = \dmr{x}\dmr{y}\dmr{z}.
+\end{align*}
+
+And the following are some common operators
+\begin{align*}
+    &\text{Gradient:} &\nabla t  &= \pdv{t}{x}\hat{x} + \pdv{t}{x}\hat{y} + \pdv{t}{z}\hat{z},\\[1em]
+    %
+    &\text{Divergence:} &\nabla\cdot\vec{v} &= \pdv{v_x}{x} + \pdv{v_y}{y} + \pdv{v_z}{z},\\[1em]
+    %
+    &\text{Curl:} &\nabla \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
+    %
+    &\text{Laplacian:} &\laplacian t &= \pdv[2]{t}{x} + \pdv[2]{t}{y} +\pdv[2]{t}{z}. 
+\end{align*}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Cylindrical Coordinates}
+The conversion of Cartesian to Cylinderical coordinates\cite{noauthor_cylindrical_2021} are
+\begin{align*}
+    x &= r \cos \phi, & y &= r \sin\phi, & z &= z.\\
+\end{align*}
+
+Note that the line and the volume integral elements are
+\begin{align*}
+    \dmr{\vec{l}} &= \hat{s}\dmr{s} + s\hat{\phi}\dmr{\phi}+\hat{z}\dmr{z}, & \dmr{\tau} = s\dmr{s}\dmr{\phi}\dmr{z}.
+\end{align*}
+
+The following are some common vector operators
+\begin{align*}
+    &\text{Gradient:} &\nabla t  &= \pdv{t}{s}\hat{s}+\frac{1}{s}\pdv{t}{\phi}\hat{\phi}+\pdv{t}{z}\hat{z},\\[1em]
+    %
+    &\text{Divergence:} &\nabla\cdot\vec{v} &= \frac{1}{s}\pdv{}{s}(sv_s)+\frac{1}{s}\pdv{v_\phi}{\phi}+\pdv{v_z}{z},\\[1em]
+    %
+    &\text{Curl:} &\nabla \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
+    %
+    &\text{Laplacian:} &\laplacian t &= \frac{1}{s}\pdv{}{s}\left(s\pdv{t}{s}\right)+\frac{1}{s^2}\pdv[2]{t}{\phi}+\pdv[2]{t}{z}. 
+\end{align*}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Spherical Coordinates}
+Note that $\theta \in [0,\pi]$ denotes the angle between z-axis and the vector of interest, and that $\phi \in [0, 2\pi]$ denotes the angle between x-axis and the projection of the vector of interest on to the xy-plane.\cite{noauthor_cylindrical_2021}
+
+The conversion of Cartesian to Spherical coordiantes are shwon as the follows
+\begin{align*}
+    x &= r \sin(\theta)\cos(\phi), & y &= r \sin(\theta)\sin(\phi), & z &= r \cos(\theta).\\
+\end{align*}
+
+And the line and volume integral elements are
+\begin{align*}
+    \dmr{\vec{l}} &= \hat{r}\dmr{r} + r\hat{\theta}\dmr{\theta} + r  \sin(\theta) \hat{\phi} \dmr{\phi}, & \dmr{\tau} = r^2 \sin(\theta) \dmr{r} \dmr{\theta} \dmr{\phi}.
+\end{align*}
+
+The following are the common operators
+\begin{align*}
+    &\text{Gradient:} &\nabla t  &= \hat{r}\pdv{t}{r} + \frac{\hat{\theta}}{r}\pdv{t}{\theta} + \frac{\hat{\phi}}{r \sin(\theta)}\pdv{t}{\phi},\\[1em]
+    %
+    &\text{Divergence:} &\nabla\cdot\vec{v} &= \frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} v_r \right)+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(v_{\theta} \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial v_{\phi}}{\partial \phi},\\[1em]
+    %
+    &\text{Curl:} &\nabla \cross \vec{v} &= \frac{1}{r\sin\theta}\left(\pdv{}{\theta}\sin(\theta) v_\phi- \pdv{v_\theta}{\phi}\right)\hat{r}\\
+    &&&+\frac{1}{r}\left(\frac{1}{\sin\theta}\pdv{v_r}{\phi}-\pdv{}{r}  r v_\phi  \right)\hat{\theta}+ \frac{1}{r}\left(\pdv{}{r}rv_\theta-\pdv{v_r}{\theta}\right)\hat{\phi},\\[1em]
+    %    
+    &\text{Laplacian:} &\laplacian t &= \frac{1}{r^2}\pdv{}{r}\left(r^2\pdv{t}{r}\right)+ \frac{1}{r^2\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{t}{\theta}\right) +\frac{1}{r^2 \sin^2 \theta}\pdv[2]{t}{\phi}.
+\end{align*}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{References}
+\addcontentsline{toc}{section}{\protect\numberline{}References}%
+\printbibliography[heading = none]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
