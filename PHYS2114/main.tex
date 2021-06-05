@@ -6,7 +6,10 @@
 \usepackage[backend=biber, citestyle=nature]{biblatex}
 \usepackage[nottoc]{tocbibind}
 \usepackage{halloweenmath}
-
+\usepackage{calligra}
+\usepackage{esint}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
 
 %%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\parindent}{2em}
@@ -23,6 +26,11 @@
 \numberwithin{equation}{subsection}
 
 \addbibresource{ref.bib}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\curly}[1]{\ensuremath{\mathcalligra{#1}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{PHYS2114 Cheat Sheet}
@@ -115,12 +123,27 @@ The following are the common operators
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
+\subsection{Gauss' Divergence Theorem}
+Suppose $V$ is a subset of $\mathbb{R}^n$ (in the case of $n=3$, $V$ represents a volume in three-dimensional space) which is compact and has a piecewise smooth boundary $S$ (also indicated with $\partial V = S$). If $\vec{F}$ is a countinueously differentiable vector filed defined on a neighbourhood of $V$, then:
+\[
+    \iiint_{V} \left(\nabla \cdot \vec{F}\right)\dmr{V} = \oiint_{S} \left(\vec{F}\cdot\hat{n}\right)\dmr{S}.
+\]
+\par The left side is a volume intgral over the volume $V$, the right side is the surface integral over the boundary of the volume $V$. The closed manifold $\partial V$ is oriented by outward-pointing normal, and $\vec{n}$ is the outward pointing normal at each point on the boundary $\partial V$. ($\dmr{\vec{S}}$ may be used as a shorthand for $\vec{n}\dmr{S}$.) In terms of the intuitive description above, the left-hand side of the equation represents the total of the sources in the volume $V$, and the right-hand side represents the total flow across the boundary $S$.\cite{noauthor_divergence_2021}
 
+\par\noindent\rule{\textwidth}{0.4pt}
 
+\subsection{Stokes' Theorem}
+Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma$ with $\vec{F}$ defined in $\Sigma$, then
+\[
+    \iint_{\Sigma} (\nabla \cross \vec{F})\cdot\vec{n}\dmr{S} = \oint_{S} \vec{F}\cdot \dmr{\vec{l}}.
+\] 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width =0.5\textwidth]{1200px-Stokes'_Theorem.svg.png}
+    \caption{A visual representation for the Stokes' theorem\cite{noauthor_stokes_2021}}
+\end{figure}
 
-
-
-
+\par\noindent\rule{\textwidth}{0.4pt}
 
 
 

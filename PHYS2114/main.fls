@@ -1,6 +1,6 @@
-PWD c:\Users\joeyl\OneDrive\Desktop\Uni\CheatSheetRepo\CheatSheetRepo
+PWD c:\Users\joeyl\OneDrive\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS2114
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\joeyl\OneDrive\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\main.tex
+INPUT c:\Users\joeyl\OneDrive\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS2114\main.tex
 OUTPUT main.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
@@ -420,6 +420,56 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\fundus-calligra\calligra.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\esint.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
 INPUT .\main.aux
 INPUT main.aux
 INPUT main.aux
@@ -452,6 +502,21 @@ INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
@@ -479,6 +544,13 @@ INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 OUTPUT main.pdf
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
@@ -495,6 +567,9 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\joeyl\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 OUTPUT main.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
@@ -506,12 +581,21 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
+INPUT .\images\\1200px-Stokes'_Theorem.svg.png
+INPUT .\images\\1200px-Stokes'_Theorem.svg.png
+INPUT images\\1200px-Stokes'_Theorem.svg.png
+INPUT .\images\\1200px-Stokes'_Theorem.svg.png
+INPUT .\images\\1200px-Stokes'_Theorem.svg.png
+INPUT .\images\\1200px-Stokes'_Theorem.svg.png
+INPUT .\images\\1200px-Stokes'_Theorem.svg.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmcsc10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
@@ -542,3 +626,5 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

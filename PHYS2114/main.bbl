@@ -79,6 +79,56 @@
       \verb https://en.wikipedia.org/w/index.php?title=Del_in_cylindrical_and_spherical_coordinates&oldid=1016691595
       \endverb
     \endentry
+    \entry{noauthor_divergence_2021}{online}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In vector calculus, the divergence theorem, also known as Gauss's theorem or Ostrogradsky's theorem, is a theorem which relates the flux of a vector field through a closed surface to the divergence of the field in the volume enclosed. More precisely, the divergence theorem states that the surface integral of a vector field over a closed surface, which is called the flux through the surface, is equal to the volume integral of the divergence over the region inside the surface. Intuitively, it states that the sum of all sources of the field in a region (with sinks regarded as negative sources) gives the net flux out of the region. The divergence theorem is an important result for the mathematics of physics and engineering, particularly in electrostatics and fluid dynamics. In these fields, it is usually applied in three dimensions. However, it generalizes to any number of dimensions. In one dimension, it is equivalent to integration by parts. In two dimensions, it is equivalent to Green's theorem.}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{5}
+      \field{note}{Page Version ID: 1025269448}
+      \field{title}{Divergence theorem}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\joeyl\\Zotero\\storage\\9NNJAJJA\\index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Divergence_theorem&oldid=1025269448
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Divergence_theorem&oldid=1025269448
+      \endverb
+    \endentry
+    \entry{noauthor_stokes_2021}{online}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{3}
+      \field{note}{Page Version ID: 1014735398}
+      \field{title}{Stokes' theorem}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Stokes%27_theorem&oldid=1014735398
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Stokes%27_theorem&oldid=1014735398
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -11,4 +11,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4}Spherical Coordinates}{4}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {}References}{5}{}%
+\contentsline {subsection}{\numberline {1.5}Gauss' Divergence Theorem}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6}Stokes' Theorem}{5}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {}References}{6}{}%
