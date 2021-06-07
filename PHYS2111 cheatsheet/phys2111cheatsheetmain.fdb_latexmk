@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1620556538 "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" "phys2111cheatsheetmain.pdf" "phys2111cheatsheetmain" 1620907350
+["pdflatex"] 1623069372 "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" "phys2111cheatsheetmain.pdf" "phys2111cheatsheetmain" 1623069374
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233948248 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233948248 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233948254 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -61,11 +61,11 @@
   "C:/Program Files/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1615551710 6289 682e18a28ebd34b27d72772c8a4cedcb ""
   "C:/Program Files/MiKTeX/tex/latex/latex-tools/indentfirst.sty" 1602844018 1665 d4cd7231755dd1dfa89af8ceddfb0e4d ""
   "C:/Users/joeyl/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1619533149 9514659 d4eec6578edb3a0b91a1e583d061bce7 ""
-  "C:/Users/joeyl/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1619533144 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/joeyl/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1622895956 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/joeyl/AppData/Roaming/MiKTeX/tex/latex/physics/physics.sty" 1355998462 29610 a9597219b282d9c78b02393dcd7d4322 ""
-  "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" 1620907348 8925 850249fa0fccfe49be9403ff1d2568d1 ""
-  "phys2111cheatsheetmain.aux" 1620556539 2287 b3b4bb3db8e9fdbbf44b8948efeb96b0 "pdflatex"
-  "phys2111cheatsheetmain.tex" 1620907348 8925 850249fa0fccfe49be9403ff1d2568d1 ""
+  "c:/Users/joeyl/OneDrive/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS2111 cheatsheet/phys2111cheatsheetmain.tex" 1620907467 8933 aad64da38b4a4d1c0b96f084891166a9 ""
+  "phys2111cheatsheetmain.aux" 1623069373 2287 b3b4bb3db8e9fdbbf44b8948efeb96b0 "pdflatex"
+  "phys2111cheatsheetmain.tex" 1620907467 8933 aad64da38b4a4d1c0b96f084891166a9 ""
   (generated)
   "phys2111cheatsheetmain.pdf"
   "phys2111cheatsheetmain.aux"
