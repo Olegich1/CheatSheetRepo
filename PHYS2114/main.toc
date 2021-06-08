@@ -15,4 +15,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.6}Stokes' Theorem}{5}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {}References}{6}{}%
+\contentsline {section}{\numberline {2}Electrostatics}{6}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}The Holy Trinity}{6}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Electrostatic Boundary Conditions}{6}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {}References}{7}{}%

@@ -588,12 +588,24 @@ INPUT .\images\\1200px-Stokes'_Theorem.svg.png
 INPUT .\images\\1200px-Stokes'_Theorem.svg.png
 INPUT .\images\\1200px-Stokes'_Theorem.svg.png
 INPUT .\images\\1200px-Stokes'_Theorem.svg.png
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
+INPUT .\images\\holytrinity.png
+INPUT .\images\\holytrinity.png
+INPUT images\\holytrinity.png
+INPUT .\images\\holytrinity.png
+INPUT .\images\\holytrinity.png
+INPUT .\images\\holytrinity.png
+INPUT .\images\\holytrinity.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmcsc10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\calligra\dpi920\callig15.pk
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\calligra\dpi920\callig15.pk
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk

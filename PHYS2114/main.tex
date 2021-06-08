@@ -29,7 +29,7 @@
 
 
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
-\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.3]callig15}{}
 \newcommand{\curly}[1]{\ensuremath{\mathcalligra{#1}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -144,12 +144,38 @@ Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma
 \end{figure}
 
 \par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+\section{Electrostatics}
+\subsection{The Holy Trinity}
+\begin{align}
+    &V = \frac{1}{4\pi\varepsilon_0}\int\frac{\rho}{\curly{r}}\dmr{\tau}\\[1em]
+    %%
+    &\laplacian V = -\frac{\rho}{\varepsilon_0}\\[1em]
+    %%
+    &E = - \nabla V\\[1em]
+    %%
+    &V = -\int \vec{E}\cdot \dmr{\vec{l}}\\[1em]
+    %%
+    &\vec{E} = \frac{1}{4\pi\varepsilon_0}\int \frac{\hat{\curly{r}}}{\curly{r}^2}\rho\dmr{\tau}\\[1em]
+    %%
+    &\nabla \cdot E = \frac{\rho}{\varepsilon_0}; \;\;\; \nabla \cross E = 0
+\end{align}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width =0.5\textwidth]{holytrinity.png}
+    \caption{The Griffith's holy trinity of electrostat\cite{Griffiths:611579}}
+\end{figure}
 
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Electrostatic Boundary Conditions}
+\begin{align}
+    \hat{n}_2 \cdot [\vec{E}_1-\vec{E}_2] &= \frac{\sigma}{\varepsilon_0}\\[0.5em]
+    \hat{n}_2 \cross [\vec{E}_1-\vec{E}_2] &= 0\\[0.5em]
+    V_1 - V_2 &= 0
+\end{align}
+Note that here the "1" and "2" just refer to the different sides of the interface.
 
-
-
-
-
+\par\noindent\rule{\textwidth}{0.4pt}
 
 
 
