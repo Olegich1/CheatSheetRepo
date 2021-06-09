@@ -176,9 +176,23 @@ Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma
 Note that here the "1" and "2" just refer to the different sides of the interface.
 
 \par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Work and Energy in Electrostatics}
+Three imporatant equations for Energy in work and energy in electro statics:
+\par For discret charges that are not very closed together,
+\begin{equation}
+    W = \frac{1}{2} \sum_{i = 1}^{n}q_i V(\vec{r}_i).
+\end{equation}
+\par For volume charge density $\rho$, 
+\begin{equation}
+    W = \frac12 \int \rho V \dmr{\tau}.
+\end{equation}
+\par And even more simply, we can have,
+\begin{equation}
+    W = \frac{\varepsilon_0}{2}\int_{\mathbb{R}^3}E^2\dmr{\tau}.
+\end{equation}
 
-
-
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Conductors}
 
 
 
@@ -193,6 +207,7 @@ Note that here the "1" and "2" just refer to the different sides of the interfac
 \newpage
 \section*{References}
 \addcontentsline{toc}{section}{\protect\numberline{}References}%
-\printbibliography[heading = none]
+\printbibliography
+[heading = none]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
