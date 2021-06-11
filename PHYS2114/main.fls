@@ -598,6 +598,8 @@ INPUT .\images\\holytrinity.png
 INPUT .\images\\holytrinity.png
 INPUT .\images\\holytrinity.png
 INPUT .\images\\holytrinity.png
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
+INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmcsc10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
@@ -632,8 +634,12 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb

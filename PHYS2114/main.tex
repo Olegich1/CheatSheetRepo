@@ -16,7 +16,7 @@
 \setlength{\parskip}{0em}
 
 \newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
-\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy intergral command
+\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy integral command
 
 
 \newtheorem{definition}{Definition}[section]
@@ -43,7 +43,7 @@
 \newpage
 \section{Mathematics Preliminary}
 \subsection{IMPORTANT NOTE}
-The following notations are taken from Griffth's `Introduction to Electromachenics'.\cite{Griffiths:611579}
+The following notations are taken from Griffths' `Introduction to Electromechanics'.\cite{Griffiths:611579}
 
 Where as the line, area and volume integral elements are the following;
 \begin{itemize}
@@ -62,7 +62,7 @@ The line and volume integral elements are
 
 And the following are some common operators
 \begin{align*}
-    &\text{Gradient:} &\nabla t  &= \pdv{t}{x}\hat{x} + \pdv{t}{x}\hat{y} + \pdv{t}{z}\hat{z},\\[1em]
+    &\text{Gradient:} &\nabla t  &= \pdv{t}{x}\hat{x} + \pdv{t}{y}\hat{y} + \pdv{t}{z}\hat{z},\\[1em]
     %
     &\text{Divergence:} &\nabla\cdot\vec{v} &= \pdv{v_x}{x} + \pdv{v_y}{y} + \pdv{v_z}{z},\\[1em]
     %
@@ -73,11 +73,16 @@ And the following are some common operators
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Cylindrical Coordinates}
-The conversion of Cartesian to Cylinderical coordinates\cite{noauthor_cylindrical_2021} are 
+The conversion of Cartesian to Cylindrical coordinates\cite{noauthor_cylindrical_2021} are 
 \begin{align*}
-    x &= r \cos \phi, & y &= r \sin\phi, & z &= z,\\
+    x &= r \cos \phi, & y &= r \sin\phi, & z &= z,
 \end{align*}
 note that $\phi \in [0,2\pi].$
+
+And the surface integral element with radius $r$ constant is
+\[
+    \dmr{\vec{S}}    = r \dmr{\phi}\dmr{z}
+\]    
 
 The line and the volume integral elements are
 \begin{align*}
@@ -99,7 +104,7 @@ The following are some common vector operators
 \subsection{Spherical Coordinates}
 Note that $\theta\in[0,\pi]$ denotes the angle between z-axis and the vector of interest, and that $\phi\in[0, 2\pi]$ denotes the angle between x-axis and the projection of the vector of interest on to the xy-plane.\cite{noauthor_cylindrical_2021}
 
-The conversion of Cartesian to Spherical coordiantes are shwon as the follows
+The conversion of Cartesian to Spherical coordinates are shown as the follows
 \begin{align*}
     x &= r \sin(\theta)\cos(\phi), & y &= r \sin(\theta)\sin(\phi), & z &= r \cos(\theta).\\
 \end{align*}
@@ -108,6 +113,10 @@ And the line and volume integral elements are
 \begin{align*}
     \dmr{\vec{l}} &= \hat{r}\dmr{r} + r\hat{\theta}\dmr{\theta} + r  \sin(\theta) \hat{\phi} \dmr{\phi}, & \dmr{\tau} = r^2 \sin(\theta) \dmr{r} \dmr{\theta} \dmr{\phi}.
 \end{align*}
+with the surface integral with the radius $r$ constant is
+\[
+    \dmr{\vec{S}} = \sin\theta \dmr{\theta} \dmr{\phi}.
+\]
 
 The following are the common operators
 \begin{align*}
@@ -124,11 +133,11 @@ The following are the common operators
 \par\noindent\rule{\textwidth}{0.4pt}
 
 \subsection{Gauss' Divergence Theorem}
-Suppose $V$ is a subset of $\mathbb{R}^n$ (in the case of $n=3$, $V$ represents a volume in three-dimensional space) which is compact and has a piecewise smooth boundary $S$ (also indicated with $\partial V = S$). If $\vec{F}$ is a countinueously differentiable vector filed defined on a neighbourhood of $V$, then:
+Suppose $V$ is a subset of $\mathbb{R}^n$ (in the case of $n=3$, $V$ represents a volume in three-dimensional space) which is compact and has a piecewise smooth boundary $S$ (also indicated with $\partial V = S$). If $\vec{F}$ is a continuously differentiable vector filed defined on a neighbourhood of $V$, then:
 \[
     \iiint_{V} \left(\nabla \cdot \vec{F}\right)\dmr{V} = \oiint_{S} \left(\vec{F}\cdot\hat{n}\right)\dmr{S}.
 \]
-\par The left side is a volume intgral over the volume $V$, the right side is the surface integral over the boundary of the volume $V$. The closed manifold $\partial V$ is oriented by outward-pointing normal, and $\vec{n}$ is the outward pointing normal at each point on the boundary $\partial V$. ($\dmr{\vec{S}}$ may be used as a shorthand for $\vec{n}\dmr{S}$.) In terms of the intuitive description above, the left-hand side of the equation represents the total of the sources in the volume $V$, and the right-hand side represents the total flow across the boundary $S$.\cite{noauthor_divergence_2021}
+\par The left side is a volume integral over the volume $V$, the right side is the surface integral over the boundary of the volume $V$. The closed manifold $\partial V$ is oriented by outward-pointing normal, and $\vec{n}$ is the outward pointing normal at each point on the boundary $\partial V$. ($\dmr{\vec{S}}$ may be used as a shorthand for $\vec{n}\dmr{S}$.) In terms of the intuitive description above, the left-hand side of the equation represents the total of the sources in the volume $V$, and the right-hand side represents the total flow across the boundary $S$.\cite{noauthor_divergence_2021}
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
@@ -163,7 +172,7 @@ Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma
 \begin{figure}[h]
     \centering
     \includegraphics[width =0.5\textwidth]{holytrinity.png}
-    \caption{The Griffith's holy trinity of electrostat\cite{Griffiths:611579}}
+    \caption{The Griffith's holy trinity of electrostatics\cite{Griffiths:611579}}
 \end{figure}
 
 \par\noindent\rule{\textwidth}{0.4pt}
@@ -177,8 +186,8 @@ Note that here the "1" and "2" just refer to the different sides of the interfac
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Work and Energy in Electrostatics}
-Three imporatant equations for Energy in work and energy in electro statics:
-\par For discret charges that are not very closed together,
+Three important equations for Energy in work and energy in electro statics:
+\par For discrete charges that are not very closed together,
 \begin{equation}
     W = \frac{1}{2} \sum_{i = 1}^{n}q_i V(\vec{r}_i).
 \end{equation}
@@ -193,11 +202,26 @@ Three imporatant equations for Energy in work and energy in electro statics:
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Conductors}
+There are \textbf{five} fundamental properties of a conductors,
+\begin{enumerate}
+    \item $E = 0$ inside a conductor.
+    \item $\rho = 0$ inside a conductor.
+    \item Any net charge resides on the surface.
+    \item A conductor is an equipotential.
+    \item $E$ is perpendicular to the surface, just outside a conductor.
+\end{enumerate}
 
+Now, let's consider the force per unit area $\vec{f}$ on any charges that rests on the surface of the conductor, with references to page 102 in the book,\footnote{`The book' is exclusively used in this note to `Introduction to Electromagnetism' by David J. Griffths} we know that
+\begin{equation}
+    \vec{f} = \sigma \vec{E}_{\text{average}} = \frac12 \sigma (\vec{E}_{\text{above}}-\vec{E}_{\text{below}}).
+\end{equation}
+In particular, that for conductors, where we know $\vec{E}_{\text{below}} = 0$ (equipotential inside the conductor), we obtain 
+\begin{equation}
+    \vec{f} = \frac{1}{2\varepsilon_0}\sigma^2 \hat{n}
+\end{equation} 
+\par\noindent\rule{\textwidth}{0.4pt}
 
-
-
-
+\subsection{Capacitors}
 
 
 
