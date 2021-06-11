@@ -13,7 +13,7 @@
 \setlength{\parskip}{0em}
 
 \newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
-\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy intergral command
+\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy integral command
 
 
 \newtheorem{definition}{Definition}[section]
@@ -69,13 +69,13 @@ Since the end points of the right path and the wrong path are the same we get
     \eta(x_1) = \eta(x_2) = 0.\label{2}    
 \end{equation}
 
-Now, the vairational problem interval in terms of the wrong path $S_0$ would be
+Now, the variational problem interval in terms of the wrong path $S_0$ would be
 \begin{align}
     S_0 &= \intt{x_1}{x_2} f(Y,Y',x) \dmr{x} \nonumber \\
     &= \intt{x_1}{x_2} f(y+\alpha \eta, y' + \alpha \eta', x)dx.
 \end{align}
 
-Note that the only difference between integral $S$ and $S_0$ is the dependence on $\alpha$. So, idealy to minimise this integral, we would find the stationary point of $S_0$ in terms of $\alpha$, this can be expressed as 
+Note that the only difference between integral $S$ and $S_0$ is the dependence on $\alpha$. So, ideally to minimise this integral, we would find the stationary point of $S_0$ in terms of $\alpha$, this can be expressed as 
 \begin{align}
     \dv{S_0}{\alpha} &= 0 \nonumber \\
     &= \intt{x_1}{x_2} \pdv{f}{\alpha} \dmr{x} \nonumber \\
@@ -108,7 +108,7 @@ which is the Euler-Lagrange Equation.
 Refer to Taylor's\footnote{The book `Classical Mechanics'\cite{TaylorJohnR.JohnRobert2005Cm} By John R. Taylor} \textbf{Example 6.2} on page 222.
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Proof of Lagrange's Equations with Constraints}
-Refer to \textbf{Section 7.4} (pg 250) in Classical Mechnics by JR Taylor.
+Refer to \textbf{Section 7.4} (pg 250) in Classical Mechanics by JR Taylor.
 
 One important thing: the right path of any action must follows Newton's second law.
 
