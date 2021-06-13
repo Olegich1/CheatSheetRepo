@@ -1,8 +1,8 @@
 \documentclass[aps,prl,reprint,10pt,amsmath,amssymb,superscriptaddress,a4paper]{revtex4-2}
-\usepackage[utf8]{inputenc} %adding UNICODE support
+\usepackage[utf8]{inputenc} % dding UNICODE support
 \usepackage[english]{babel}
-\usepackage{indentfirst} %Indentation always (personal preference)
-\usepackage{hyperref} %Hyper link for everything
+\usepackage{indentfirst} % Indentation always (personal preference)
+\usepackage{hyperref} % Hyper link for everything
 \usepackage{graphicx} % Graphics package
 \usepackage{dcolumn} % Double column package
 \usepackage{amsmath, amsfonts, amsthm, physics} % Maths packages
@@ -10,13 +10,39 @@
 \usepackage{datetime} % Package for automatic date & time
 \usepackage{lipsum} % Inserts dummy latin text into template -- Can remove from final submission
 \usepackage{natbib} % Actually using a package to cite unlike the boomers
+\usepackage{listings} % To list code in your lab report
+\usepackage{appendix} % This one kinda explains itself
+\usepackage{xcolor}
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\lstset{style=mystyle}
 \setcitestyle{authoryear,round}
 \begin{document}
 \title{Joey's Lab Report Template}
-
 \author{J. Liang (z1234567)}
 \affiliation{Cohort A - Mon 9-12 class}
 \affiliation{Word count: XXXX words} % If you use VS code like me, this environment is highly recommended: https://marketplace.visualstudio.com/items?itemName=geoffkaile.latex-count
@@ -112,5 +138,11 @@ The original template of this lab report was put together by Prof. A. P. Micolic
 
 \bibliographystyle{agsm}
 \bibliography{sample.bib}
+
+\newpage
+\onecolumngrid
+\section{\appendixname}
+The following is an example of a piece of Python code that will crash your computer
+\lstinputlisting{helloworld.py}
 
 \end{document}
