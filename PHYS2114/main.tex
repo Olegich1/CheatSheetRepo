@@ -9,11 +9,10 @@
 \usepackage{calligra}
 \usepackage{esint}
 \usepackage{graphicx}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 \graphicspath{{./images/}}
 
 %%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\parskip}{1em}
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0em}
 
@@ -225,8 +224,16 @@ In particular, that for conductors, where we know $\vec{E}_{\text{below}} = 0$ (
 
 \subsection{Capacitors}
 
+\begin{equation*}
+    Q = CV.
+\end{equation*}
 
+\medskip
+\section{Special Techniques}
+\subsection{Uniqueness Theorems}
+\textbf{First uniqueness theorem:} The solution to Laplace's equation in some volume $\mathcal{V}$ is uniquely determined if $V$ is specified on the boundary surface $S$.
 
+\textbf{Second uniqueness theorem:} In a volume $\mathcal{V}$ surrounded by conductors and containing a specified charge density $\rho$, the electric field is uniquely determined if the \textit{total charge} on each conductor is given. (The region as a whole can be bounded by another conductor, or else unbounded.)\cite{Griffiths:611579}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
