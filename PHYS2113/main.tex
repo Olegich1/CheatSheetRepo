@@ -112,12 +112,82 @@ Refer to Taylor's\footnote{The book `Classical Mechanics'\cite{TaylorJohnR.JohnR
 Refer to \textbf{Section 7.4} (pg 250) in Classical Mechanics by JR Taylor.
 
 One important thing: the right path of any action must follows Newton's second law.
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Lagrangian Multipliers}
+Suppose we have a system with two variables $x, y$. Which are linked together with a constraint, say $F(x,y) = C \in \mathbb{R}.$ 
+
+Now, let us introduce this function $\lambda(t)$ (aka Lagrange multiplier), and now the E-L Equation for $x$ becomes 
+\begin{equation}
+    \pdv{L}{x} +\lambda(t)\pdv{F}{x} = \dv{t}\pdv{L}{\dot{x}},\label{3}
+\end{equation}
+similarly, the E-L equation for $y$ is 
+\begin{equation}
+    \pdv{L}{y} +\lambda(t)\pdv{F}{y} = \dv{t}\pdv{L}{\dot{y}}.\label{4}
+\end{equation}
+
+Now, fingers cross that we can solve the above two equations. Then we can rewrite one of the variable in terms of the other and obtain their time derivatives, e.g.
+\begin{align}
+    x &= g(y),\\
+    \implies \dot{x} &= \dv{t}g(y),\\
+    \implies \ddot{x} &= \dv[2]{t}g(y).
+\end{align}
+
+And then we can substitute them into our results from Eq. \eqref{3} \& \eqref{4}. If we don't drink and do maths, by now, we should just be able to obtain $\lambda(t)$ with a little more algebra.
+
+
+
+
+
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Conservation of Energy and the Hamiltonian}
-Refer to section \textbf{Section 7.8} (pg 269) in Taylor's.
+Refer to section \textbf{Section 7.8} (pg 269) in Taylor's for derivation.
 
 
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Legendre Transform}
+Let's have and input system that consists of 
+\begin{align*}
+    &F(u_1, \dots u_n, w_1, \dots w_n);\\
+    &v_i = \pdv{F}{u_i};\\
+    &G = \sum_{i = 1}^{n} u_i v_i - F.
+\end{align*}
+
+By performing a Legendre Transform, we will get the output system that consists of 
+\begin{align*}
+    &G(v_1, \dots v_n, w_1, \dots w_n);\\
+    &u_i = \pdv{G}{v_i};\\
+    &F = \sum_{i = 1}^{n} u_i v_i - G.
+\end{align*}
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+
+\section{Very Short Session on Hamiltonian Mechanics}
+\subsection{From Lagrangian to Hamiltonian}
+Let us record that in the Lagrangian, we have a function of three dependents,
+\begin{equation}
+    L = L(q_1, \dots q_n, \dot{q}_1, \dots \dot{q}_n, t) = T - U,
+\end{equation}
+and obviously, the Euler-Lagrange equation would be
+\begin{equation}
+    \pdv{L}{q_i} = \dv{t}\pdv{L}{\dot{q}_i}.
+\end{equation}
+Also remember that the \textbf{generalised momentum} (a.k.a canonical momentum/momentum conjugate to $q_i$) is given by 
+\begin{equation}
+    p_i = \pdv{L}{\dot{q}_i}.
+\end{equation}
+
+The Hamiltonian is defined as
+\begin{equation}
+    H = \sum_{i = 1}^{n} p_i \dot{q}_i - L.
+\end{equation}
+
+If we apply the Legendre Transform to the E-L equation, we will find the Hamilton's equations
+\begin{align}
+    \dot{q}_i = \pdv{H}{p_i}, && \dot{p}_i = \pdv{H}{q_i}.
+\end{align}
+\par\noindent\rule{\textwidth}{0.4pt}
 
 
 
