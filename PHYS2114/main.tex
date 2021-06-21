@@ -9,7 +9,7 @@
 \usepackage{calligra}
 \usepackage{esint}
 \usepackage{graphicx}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 \graphicspath{{./images/}}
 
 %%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,6 +32,11 @@
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 \DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.3]callig15}{}
 \newcommand{\curly}[1]{\ensuremath{\mathcalligra{#1}}}
+
+\let\oldhat\hat
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+\newcommand{\ar}[1]{\overset{\rightharpoonup}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{PHYS2114 Cheat Sheet}
@@ -63,11 +68,11 @@ The line and volume integral elements are
 
 And the following are some common operators
 \begin{align*}
-    &\text{Gradient:} &\nabla t  &= \pdv{t}{x}\hat{x} + \pdv{t}{y}\hat{y} + \pdv{t}{z}\hat{z},\\[1em]
+    &\text{Gradient:} &\grad t  &= \pdv{t}{x}\hat{x} + \pdv{t}{y}\hat{y} + \pdv{t}{z}\hat{z},\\[1em]
     %
-    &\text{Divergence:} &\nabla\cdot\vec{v} &= \pdv{v_x}{x} + \pdv{v_y}{y} + \pdv{v_z}{z},\\[1em]
+    &\text{Divergence:} &\grad\cdot\vec{v} &= \pdv{v_x}{x} + \pdv{v_y}{y} + \pdv{v_z}{z},\\[1em]
     %
-    &\text{Curl:} &\nabla \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
+    &\text{Curl:} &\grad \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
     %
     &\text{Laplacian:} &\laplacian t &= \pdv[2]{t}{x} + \pdv[2]{t}{y} +\pdv[2]{t}{z}. 
 \end{align*}
@@ -92,11 +97,11 @@ The line and the volume integral elements are
 
 The following are some common vector operators
 \begin{align*}
-    &\text{Gradient:} &\nabla t  &= \pdv{t}{s}\hat{s}+\frac{1}{s}\pdv{t}{\phi}\hat{\phi}+\pdv{t}{z}\hat{z},\\[1em]
+    &\text{Gradient:} &\grad t  &= \pdv{t}{s}\hat{s}+\frac{1}{s}\pdv{t}{\phi}\hat{\phi}+\pdv{t}{z}\hat{z},\\[1em]
     %
-    &\text{Divergence:} &\nabla\cdot\vec{v} &= \frac{1}{s}\pdv{}{s}(sv_s)+\frac{1}{s}\pdv{v_\phi}{\phi}+\pdv{v_z}{z},\\[1em]
+    &\text{Divergence:} &\grad\cdot\vec{v} &= \frac{1}{s}\pdv{}{s}(sv_s)+\frac{1}{s}\pdv{v_\phi}{\phi}+\pdv{v_z}{z},\\[1em]
     %
-    &\text{Curl:} &\nabla \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
+    &\text{Curl:} &\grad \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
     %
     &\text{Laplacian:} &\laplacian t &= \frac{1}{s}\pdv{}{s}\left(s\pdv{t}{s}\right)+\frac{1}{s^2}\pdv[2]{t}{\phi}+\pdv[2]{t}{z}. 
 \end{align*}
@@ -121,11 +126,11 @@ with the surface integral with the radius $r$ constant is
 
 The following are the common operators
 \begin{align*}
-    &\text{Gradient:} &\nabla t  &= \hat{r}\pdv{t}{r} + \frac{\hat{\theta}}{r}\pdv{t}{\theta} + \frac{\hat{\phi}}{r \sin(\theta)}\pdv{t}{\phi},\\[1em]
+    &\text{Gradient:} &\grad t  &= \hat{r}\pdv{t}{r} + \frac{\hat{\theta}}{r}\pdv{t}{\theta} + \frac{\hat{\phi}}{r \sin(\theta)}\pdv{t}{\phi},\\[1em]
     %
-    &\text{Divergence:} &\nabla\cdot\vec{v} &= \frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} v_r \right)+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(v_{\theta} \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial v_{\phi}}{\partial \phi},\\[1em]
+    &\text{Divergence:} &\grad\cdot\vec{v} &= \frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} v_r \right)+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(v_{\theta} \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial v_{\phi}}{\partial \phi},\\[1em]
     %
-    &\text{Curl:} &\nabla \cross \vec{v} &= \frac{1}{r\sin\theta}\left(\pdv{}{\theta}\sin(\theta) v_\phi- \pdv{v_\theta}{\phi}\right)\hat{r}\\
+    &\text{Curl:} &\grad \cross \vec{v} &= \frac{1}{r\sin\theta}\left(\pdv{}{\theta}\sin(\theta) v_\phi- \pdv{v_\theta}{\phi}\right)\hat{r}\\
     &&&+\frac{1}{r}\left(\frac{1}{\sin\theta}\pdv{v_r}{\phi}-\pdv{}{r}  r v_\phi  \right)\hat{\theta}+ \frac{1}{r}\left(\pdv{}{r}rv_\theta-\pdv{v_r}{\theta}\right)\hat{\phi},\\[1em]
     %    
     &\text{Laplacian:} &\laplacian t &= \frac{1}{r^2}\pdv{}{r}\left(r^2\pdv{t}{r}\right)+ \frac{1}{r^2\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{t}{\theta}\right) +\frac{1}{r^2 \sin^2 \theta}\pdv[2]{t}{\phi}.
@@ -136,7 +141,7 @@ The following are the common operators
 \subsection{Gauss' Divergence Theorem}
 Suppose $V$ is a subset of $\mathbb{R}^n$ (in the case of $n=3$, $V$ represents a volume in three-dimensional space) which is compact and has a piecewise smooth boundary $S$ (also indicated with $\partial V = S$). If $\vec{F}$ is a continuously differentiable vector filed defined on a neighbourhood of $V$, then:
 \[
-    \iiint_{V} \left(\nabla \cdot \vec{F}\right)\dmr{V} = \oiint_{S} \left(\vec{F}\cdot\hat{n}\right)\dmr{S}.
+    \iiint_{V} \left(\grad \cdot \vec{F}\right)\dmr{V} = \oiint_{S} \left(\vec{F}\cdot\hat{n}\right)\dmr{S}.
 \]
 \par The left side is a volume integral over the volume $V$, the right side is the surface integral over the boundary of the volume $V$. The closed manifold $\partial V$ is oriented by outward-pointing normal, and $\vec{n}$ is the outward pointing normal at each point on the boundary $\partial V$. ($\dmr{\vec{S}}$ may be used as a shorthand for $\vec{n}\dmr{S}$.) In terms of the intuitive description above, the left-hand side of the equation represents the total of the sources in the volume $V$, and the right-hand side represents the total flow across the boundary $S$.\cite{noauthor_divergence_2021}
 
@@ -145,7 +150,7 @@ Suppose $V$ is a subset of $\mathbb{R}^n$ (in the case of $n=3$, $V$ represents 
 \subsection{Stokes' Theorem}
 Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma$ with $\vec{F}$ defined in $\Sigma$, then
 \[
-    \iint_{\Sigma} (\nabla \cross \vec{F})\cdot\vec{n}\dmr{S} = \oint_{S} \vec{F}\cdot \dmr{\vec{l}}.
+    \iint_{\Sigma} (\grad \cross \vec{F})\cdot\vec{n}\dmr{S} = \oint_{S} \vec{F}\cdot \dmr{\vec{l}}.
 \] 
 \begin{figure}[h]
     \centering
@@ -158,17 +163,17 @@ Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma
 \section{Electrostatics}
 \subsection{The Holy Trinity}
 \begin{align}
-    &V = \frac{1}{4\pi\varepsilon_0}\int\frac{\rho}{\curly{r}}\dmr{\tau}\\[1em]
+    &V = \frac{1}{4\pi\varepsilon_0}\iiint_{\mathcal{V}} \frac{\rho}{\curly{r}}\dmr{\tau}\\[1em]
     %%
     &\laplacian V = -\frac{\rho}{\varepsilon_0}\\[1em]
     %%
-    &E = - \nabla V\\[1em]
+    &E = - \grad V\\[1em]
     %%
     &V = -\int \vec{E}\cdot \dmr{\vec{l}}\\[1em]
     %%
-    &\vec{E} = \frac{1}{4\pi\varepsilon_0}\int \frac{\hat{\curly{r}}}{\curly{r}^2}\rho\dmr{\tau}\\[1em]
+    &\vec{E} = \frac{1}{4\pi\varepsilon_0}\iiint_{\mathcal{V}} \frac{\hat{\curly{r}}}{\curly{r}^2}\rho\dmr{\tau}\\[1em]
     %%
-    &\nabla \cdot E = \frac{\rho}{\varepsilon_0}; \;\;\; \nabla \cross E = 0
+    &\grad \cdot E = \frac{\rho}{\varepsilon_0}; \;\;\; \grad \cross E = 0
 \end{align}
 \begin{figure}[h]
     \centering
@@ -194,11 +199,11 @@ Three important equations for Energy in work and energy in electro statics:
 \end{equation}
 \par For volume charge density $\rho$, 
 \begin{equation}
-    W = \frac12 \int \rho V \dmr{\tau}.
+    W = \frac12 \iiint_{\mathcal{V}} \rho V \dmr{\tau}.
 \end{equation}
 \par And even more simply, we can have,
 \begin{equation}
-    W = \frac{\varepsilon_0}{2}\int_{\mathbb{R}^3}E^2\dmr{\tau}.
+    W = \frac{\varepsilon_0}{2}\iiint_{\mathbb{R}^3}E^2\dmr{\tau}.
 \end{equation}
 
 \par\noindent\rule{\textwidth}{0.4pt}
@@ -238,11 +243,78 @@ In particular, that for conductors, where we know $\vec{E}_{\text{below}} = 0$ (
 \par\noindent\rule{\textwidth}{0.4pt}
 \par\noindent\rule{\textwidth}{0.4pt}
 \section{Electric Field in Matter}
+\subsection{Induced Dipoles}
 Suppose we have an uniform electric field $\vec{E}$, and an atom (dipole) is in this field. This atom will now posses some dipole moment. The dipole moment is \textbf{most of the times} approximately proportional to the field.
 \begin{equation}
     \vec{p} = \alpha \vec{E}.
-\end{equation} 
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Bound Charges}
+Let's suppose we have a blob of polarised material, with dipole moment $\vec{p} = \vec{P}(\vec{r'})\dmr{\tau'}$ in each volume element. The total potential is 
+\[
+    V(\vec{r})= \frac{1}{4 \pi \varepsilon_0}\iiint_{\mathcal{V}}\frac{\hat{\curly{r}}\cdot \vec{P}(\vec{r'})}{\curly{r}^2}\dmr{\tau'}.
+\]
+And after some maths, we then obtain
+\begin{equation}
+    V = \frac{1}{4 \pi \varepsilon_0} \oiint_{\mathcal{S}} \frac{1}{\curly{r}} \vec{P}\cdot \dmr{\vec{a'}} - \frac{1}{4 \pi \varepsilon_0} \iiiint_{\mathcal{V}} \frac{1}{\curly{r}} (\grad \cdot \vec{P}) \dmr{\tau'}.    
+\end{equation}
 
+Notice that 
+\begin{align*}
+    \underbrace{\sigma_{b} = \vec{P} \cdot \hat{n}}_{\text{Surface bound charge}}, &&\text{and}&& \underbrace{\rho_b = -\grad \cdot \vec{P}}_{\text{Volume bound charge}}.
+\end{align*}
+
+Those are called bound charges (surface bound charges \& volume bound charge), we can just find them to get the voltage of the polarised dialectic blob instead of calculating the massive integral.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{The Electric Displacement}
+\subsubsection{Gauss's Law in the Presence of DIelectrics}
+Blah blah blah there is something called the ``free charge" because we don't live in a perfect world. So the total charge density is now
+\[
+    \rho = \rho_b + \rho_f.
+\]
+
+and Gauss' law reads
+
+\begin{align}
+     && \varepsilon_0 \grad \cdot \vec{E} = \rho = \rho_b + \rho_f &= -\grad\cdot\vec{P} + \rho_f;\nonumber \\
+    &\implies& \rho_f &= \grad\cdot\left(\varepsilon_0 \vec{E} + \vec{P}\right);\nonumber \\
+    &\implies& \vec{D} &= \varepsilon_0 \vec{E} + \vec{P};\\
+    &\implies& \grad \cdot \vec{D} &= \rho_f;\\
+    &\implies& \oiint_{\mathcal{S}} \vec{D} \cdot \dmr{\vec{a}} &= Q_{f_{\text{enc}}}.
+\end{align}
+
+\textit{Trick}: In most of cases, $\vec{D}$ is determined exclusively by the free charge if we are dealing with symmetrical systems.
+\subsubsection{Boundary Conditions}
+\begin{align}
+    D^{\bot}_{\text{above}}-D^{\bot}_{\text{below}} &= \sigma_f;\\
+    \vec{D}^{\parallel}_{\text{above}}-\vec{D}^{\parallel}_{\text{below}} &= \vec{P}^{\parallel}_{\text{above}}-\vec{P}^{\parallel}_{\text{above}};\\
+    E^{\bot}_{\text{above}}-E^{\bot}_{\text{below}} &= \frac{\sigma}{\varepsilon_0};\\
+    \vec{E}^{\parallel}_{\text{above}}-\vec{E}^{\parallel}_{\text{below}} &=0.
+\end{align}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Linear Dielectrics}
+Iff a space that is entirely filled with a homogeneous linear dielectric, then 
+\begin{align*}
+    \div \vec{D} = \rho_f &&\text{and}&& \curl \vec{D} =0.
+\end{align*}
+
+And, also
+\[
+    \vec{D} = \varepsilon_0 \vec{E}_{\text{vac}}
+\]
+where $\vec{E}_{\text{vac}}$ is the filed the same free charge would produce in the absence of dielectric.
+
+So, we can conclude that
+\begin{equation}
+    \vec{E} = \frac{1}{\varepsilon} \vec{D} = \frac{1}{\varepsilon_r}\vec{E}_{\text{vac}}.
+\end{equation}
+
+Now, just for the sake of a very simple example, if we have a free charge $q$ that is embedded in a large dielectric, the field it produces is 
+\begin{equation}
+    \vec{E} = \frac{1}{4 \pi \varepsilon} \frac{q}{r^2} \hat{r}.
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section*{References}
