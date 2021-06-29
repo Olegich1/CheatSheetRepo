@@ -13,6 +13,7 @@
 \usepackage{esint}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{float}
 \graphicspath{{./images/}}
 
 %%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%
@@ -191,7 +192,7 @@ Suppose we have a boundary $\partial \Sigma = S$ that bounds the surface $\Sigma
     \hat{n}_2 \cross [\vec{E}_1-\vec{E}_2] &= 0\\[0.5em]
     V_1 - V_2 &= 0
 \end{align}
-Note that here the "1" and "2" just refer to the different sides of the interface.
+Note that here the ``1" and ``2" just refer to the different sides of the interface.
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Work and Energy in Electrostatics}
@@ -256,11 +257,54 @@ Once again, you can find the full derivation \href{http://www.physics.usu.edu/Wh
 \begin{equation}
     V(s, \theta, \phi) = \sum_{l = 0}^{\infty} \sum_{l}^{m=-l} \left(A_{lm}r^l + \frac{B_{lm}}{r^{l+1}} \right) P_{l}^{m}(\cos \theta) \exp(im\phi)
 \end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Multipole Expansion}
+\subsubsection{The Multipole Expansion}
+Note that $P_n$ represents the $n^{\text{th}}$ Legendre Polynomial,
+\begin{equation}
+    V(\vec{r})=\frac{1}{4\pi\varepsilon_0} \sum_{n=0}^{\infty}\frac{1}{r^{n+1}}\int(r')^{n}P_n(\cos \theta')\rho(\vec{r}')\dmr{\tau'}.
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width =0.5\textwidth]{multipole.png}
+\end{figure}
+
+\subsubsection{The Dipole Term}
+Since $P_0 = 1$, the dipole moment is then 
+\begin{equation}
+    \vec{p} = \int \vec{r'} \rho(\vec{r'}) \dmr{\tau'}.
+\end{equation}
+
+And the dipole (DIPOLE ONLY) contribution to the potential is
+\begin{equation}
+    V_{\text{dip}}(\vec{r}) = \frac{1}{4 \pi \varepsilon_0} \frac{\vec{p}\cdot\hat{r}}{r^2}.
+\end{equation}
+
+\subsubsection{The Electric Filed of a Dipole}
+The electric field is simply 
+\begin{equation}
+    \vec{E}_{\text{dip}}(r,\theta)=\frac{p}{4 \pi \varepsilon_0 r^3}(2\cos \theta \; \hat{r} + \sin \theta \; \hat{\boldsymbol\theta}).
+\end{equation}
+
+
 
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \par\noindent\rule{\textwidth}{0.4pt}
 \section{Electric Field in Matter}
+
+\subsection{Polarisation}
+The torque a dipole experiences due to a field $\vec{E}$ is 
+\begin{equation}
+    \vec{N} = \vec{p} \cross \vec{E}.
+\end{equation}
+And the force the dipole experiences is 
+\begin{equation}
+    \vec{F} = (\vec{p}\cdot\vec{\nabla})\vec{E}
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+
 \subsection{Induced Dipoles}
 Suppose we have an uniform electric field $\vec{E}$, and an atom (dipole) is in this field. This atom will now posses some dipole moment. The dipole moment is \textbf{most of the times} approximately proportional to the field.
 \begin{equation}
@@ -283,7 +327,6 @@ Notice that
 \end{align*}
 
 Those are called bound charges (surface bound charges \& volume bound charge), we can just find them to get the voltage of the polarised dialectic blob instead of calculating the massive integral.
-
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{The Electric Displacement}
 \subsubsection{Gauss's Law in the Presence of DIelectrics}
@@ -292,14 +335,14 @@ Blah blah blah there is something called the ``free charge" because we don't liv
     \rho = \rho_b + \rho_f.
 \]
 
-and Gauss' law reads
+And Gauss' law reads
 
 \begin{align}
-     && \varepsilon_0 \grad \cdot \vec{E} = \rho = \rho_b + \rho_f &= -\grad\cdot\vec{P} + \rho_f;\nonumber \\
-    &\implies& \rho_f &= \grad\cdot\left(\varepsilon_0 \vec{E} + \vec{P}\right);\nonumber \\
-    &\implies& \vec{D} &= \varepsilon_0 \vec{E} + \vec{P};\\
-    &\implies& \grad \cdot \vec{D} &= \rho_f;\\
-    &\implies& \oiint_{\mathcal{S}} \vec{D} \cdot \dmr{\vec{a}} &= Q_{f_{\text{enc}}}.
+     && &\varepsilon_0 \grad \cdot \vec{E} = \rho = \rho_b + \rho_f = -\grad\cdot\vec{P} + \rho_f;\nonumber \\
+    &\implies& &\rho_f = \grad\cdot\left(\varepsilon_0 \vec{E} + \vec{P}\right);\nonumber \\
+    &\implies& &\vec{D} = \varepsilon_0 \vec{E} + \vec{P};\\
+    &\implies& &\grad \cdot \vec{D} = \rho_f;\\
+    &\implies& &\oiint_{\mathcal{S}} \vec{D} \cdot \dmr{\vec{a}} = Q_{f_{\text{enc}}}.
 \end{align}
 
 \textit{Trick}: In most of cases, $\vec{D}$ is determined exclusively by the free charge if we are dealing with symmetrical systems.
