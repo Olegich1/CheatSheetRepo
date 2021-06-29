@@ -1,4 +1,7 @@
-\documentclass[a4paper]{article}
+\documentclass[12pt,english]{article}
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=1in,right=1in,top=1in,bottom=1in,%
+            footskip=.25in]{geometry}
 \usepackage{amsfonts, amsmath, amssymb, physics}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -239,6 +242,21 @@ Note that the one thing we need to know about capacitance is that it is nothing 
 \textbf{First uniqueness theorem:} The solution to Laplace's equation in some volume $\mathcal{V}$ is uniquely determined if $V$ is specified on the boundary surface $S$.
 
 \textbf{Second uniqueness theorem:} In a volume $\mathcal{V}$ surrounded by conductors and containing a specified charge density $\rho$, the electric field is uniquely determined if the \textit{total charge} on each conductor is given. (The region as a whole can be bounded by another conductor, or else unbounded.)\cite{Griffiths:611579}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Separation of Variables}
+\subsubsection{Cylindrical Coordinate}
+You can find the full derivation \href{http://faculty.washington.edu/blayneh/cylcoord.pdf}{\textbf{here.}} For those who just care about the result (of potential $V$) without $\hat{z}$ dependence
+\begin{multline}
+    V(s,\phi) = a_0 + b_0 \ln s\\
+    + \sum_{k=1}^{\infty} \left[ s^k ( a_k \cos k \phi + b_k \sin k \phi) + s^{-k} (c_k \cos k \phi + d_k \sin k \phi) \right].
+\end{multline}
+
+\subsubsection{Spherical Coordinate}
+Once again, you can find the full derivation \href{http://www.physics.usu.edu/Wheeler/EM3600/Notes11SeparationOfVariablesSpherical.pdf}{\textbf{here.}} And the general result for the potential $V(s, \theta, \phi)$ is
+\begin{equation}
+    V(s, \theta, \phi) = \sum_{l = 0}^{\infty} \sum_{l}^{m=-l} \left(A_{lm}r^l + \frac{B_{lm}}{r^{l+1}} \right) P_{l}^{m}(\cos \theta) \exp(im\phi)
+\end{equation}
+
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \par\noindent\rule{\textwidth}{0.4pt}
