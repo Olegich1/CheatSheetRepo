@@ -375,6 +375,126 @@ Now, just for the sake of a very simple example, if we have a free charge $q$ th
 \begin{equation}
     \vec{E} = \frac{1}{4 \pi \varepsilon} \frac{q}{r^2} \hat{r}.
 \end{equation}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+\section{Magnetostatics}
+\subsection{Currents}
+The magnetic force on a segment of current-carrying wire is evidently 
+\begin{equation}
+    \vec{F}_{\text{mag}} = \int (\vec{v}\cross\vec{B}) \dmr{q} = \int (\vec{v}\cross\vec{B})\lambda\dmr{l} = \int(\vec{I}\cross\vec{B})\dmr{l}.
+\end{equation}
+And because $\vec{I}$ and $\dmr{\vec{l}}$ both point in the same direction, we then just have
+\begin{equation}
+    \vec{F}_{\text{mag}} =\int I(\dmr{\vec{l}}\cross \vec{B}).
+\end{equation}
+
+Here is this another thing that is quite useful which is called the surface current density $\vec{K}$, it is defined as the current per unit width-perpendicular-to-flow. Say we have surface charge density $\sigma$ and it has velocity $\vec{v}$, then
+\begin{equation}
+    \vec{K} = \sigma \vec{v}.
+\end{equation}
+And the force it will experience in a magnetic field will be
+\begin{equation}
+    \vec{F}_{\text{mag}}=\int (\vec{v} \cross \vec{B})\sigma \dmr{a} = \int (\vec{K}\cross \vec{B})\dmr{a}.
+\end{equation}
+
+Moving on, let's introduce another $\vec{J}$ called the volume current density, it is defined as the current per unit area-perpendicular-to-flow. And for some volume charge density $\rho$ and velocity $\vec{v}$, we have
+\begin{equation}
+    \vec{J} = \rho \vec{v},
+\end{equation}
+and the magnetic force on a volume current is therefore
+\begin{equation}
+    \vec{F}_{\text{mag}} = \int (\vec{v}\cross\vec{B})\rho \dmr{\tau} = \int (\vec{J}\cross \vec{B})\dmr{\tau}.
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{The Biot-Savart Law}
+\subsubsection{The Magnetic Field of a Steady Current}
+The magnetic filed of a steady line current is given by the \textbf{Biot-Savart law}:
+\begin{equation}
+    \vec{B}(\vec{r}) = \frac{\mu_0}{4\pi}\int\frac{\vec{I}\cross\hat{\curly{r}}}{\curly{r}^2}\dmr{l'} = \frac{\mu_0}{4\pi}I\int \frac{\dmr{\vec{l'}}\cross\hat{\curly{r}}}{\curly{r}^2}.
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{The Divergence and Curl of B}
+As the title stated, the divergence and the curl of $\vec{B}$ are
+\begin{align*}
+    \curl\vec{B} = \mu_0 \vec{J}, && \divergence \vec{B} =0.
+\end{align*}
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Applications of Ampepe's Law}
+The equation for the curl of $\vec{B}$
+\begin{equation}
+    \curl B = \mu_0 \vec{J},
+\end{equation}
+is called Ampere's law, and it can also be written in the following form
+\begin{equation}
+    \int(\curl\vec{B})\cot\dmr{\vec{a}} = \oint \vec{B} \cdot \dmr{\vec{l}} = \mu_0 \int \vec{J} \cdot \dmr{\vec{a}} = \mu_0 I_{\text{enc}}.
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Magnetic Vector Potential}
+Just like the electrical potential, we can have a vector potential for the magnetic field and it is 
+\begin{equation}
+    \vec{B} = \curl \vec{A},
+\end{equation}
+where $\vec{A}$ is the vector potential in magnetostatics.
+
+And since $\vec{A}$ is divergenceless, the Amepere's law for $\vec{A}$ is then 
+\begin{equation}
+    \laplacian\vec{A} = - \mu_0 \vec{J}.
+\end{equation}
+
+Now let's look at the vector potential for line, volume and surface current respectively
+\begin{align}
+    &\text{Line Current:} &&\vec{A} = \frac{\mu_0}{4 \pi} \int \frac{\vec{I}}{\curly{r}}\dmr{l'} = \frac{\mu_0 I }{4 \pi} \int \frac{1}{\curly{r}}\dmr{l'};\\
+    &\text{Surface Current:} &&\vec{A} = \frac{\mu_0 }{4 \pi} \int \frac{\vec{K}}{\curly{r}}\dmr{a'};\\
+    &\text{Volume Current} &&\vec{A} = \frac{\mu_0}{4 \pi}\int \frac{\vec{J}(\vec{r'})}{\curly{r}}\dmr{\tau'}.
+\end{align}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Summary And Magnetostatics Boundary Conditions}
+\subsubsection{Boundary Condition}
+The magnetic filed on a surface only have one component that is discontinuous, namely the component that is parallel to the surface and normal to the surface current $\vec{K}$. We can express this discontinuity simply
+\begin{equation}
+    \vec{B}_{\text{above}} - \vec{B}_{\text{below}} = \mu_0(\vec{K}\cross \hat{n})
+\end{equation}
+Similar to potential in electro static, the vector potential is continuous across any boundary:
+\begin{equation}
+    \vec{A}_{\text{above}} = \vec{A}_{\text{below}}.
+\end{equation}
+
+Further on, know that the flux is just the contour integral of $\vec{A}$
+\begin{equation}
+    \oint \vec{A} \cdot \dmr{l} = \int \vec{B} \cdot \dmr{\vec{a}} = \mathrm{\Phi}. 
+\end{equation}
+It is worth to note that the derivative of $\vec{A}$ inherits the discontinuity of $\vec{B}$:
+\begin{equation}
+    \pdv{\vec{A}_{\text{above}}}{n} -\pdv{\vec{A}_{\text{below}}}{n} = -\mu_0 \vec{K}.
+\end{equation}
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Magnetic Dipoles}
+The vector potential due to a magnetic dipole is 
+\begin{equation}
+    \vec{A}_{\text{dip}}(\vec{r}) = \frac{\mu_0 I}{4 \pi r^2} \oint (\hat{r}\cdot\vec{r'})\dmr{\vec{l'}}=\frac{\mu_0}{4\pi}\frac{\vec{m}\cross \hat{r}}{r^2},
+\end{equation}
+where $\vec{m}$ is the magnetic dipole moment:
+\begin{equation}
+    \vec{m} = I \vec{a}. 
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
 \par\noindent\rule{\textwidth}{0.4pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
