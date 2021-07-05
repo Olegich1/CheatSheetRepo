@@ -1,0 +1,102 @@
+Note that 1 denotes to left and 2 denotes to right
+
+measure1    IP
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    60E-2
+Dlen1   0.5E-2
+len2    60E-2
+Dlen2   0.5E-2
+
+measure2    OP
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    60E-2
+Dlen1   0.5E-2
+len2    60E-2
+Dlen2   0.5E-2
+
+measure3    BM
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    60E-2
+Dlen1   0.5E-2
+len2    60E-2
+Dlen2   0.5E-2
+rightbeat left
+
+measure4    IP
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    40E-2
+Dlen1   0.5E-2
+len2    40E-2
+Dlen2   0.5E-2
+
+measure5    OP
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    40E-2
+Dlen1   0.5E-2
+len2    40E-2
+Dlen2   0.5E-2
+
+measure6    BM
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    40E-2
+Dlen1   0.5E-2
+len2    40E-2
+Dlen2   0.5E-2
+
+measure7    IP
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    20E-2
+Dlen1   0.5E-2
+len2    20E-2
+Dlen2   0.5E-2
+
+measure8    OP
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    20E-2
+Dlen1   0.5E-2
+len2    20E-2
+Dlen2   0.5E-2
+
+measure9    BM
+parameterms NA
+L1  97E-2
+DL1 4E-2
+L2  97E-2
+DL2 4E-2
+len1    20E-2
+Dlen1   0.5E-2
+len2    20E-2
+Dlen2   0.5E-2
+
