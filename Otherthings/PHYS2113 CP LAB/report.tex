@@ -117,7 +117,7 @@ And just for curiosity, let us observe what happens at the two extreme: very wea
 \par\noindent\rule{\linewidth}{0.4pt}
 
 \section{Method}
-Firstly, the spring constant is measured using a number of weights. The spring is first place horizontally on the table to determined the equilibrium position (without it being affected by its own weight). Then, the changed of length are taken from each time a mass is added on the spring when it is hung vertically. The data are recorded, and to determined the spring's constant $k$. A linear regression model from SciPy\cite{2020SciPy-NMeth} is used (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/springconstant.html}{\textbf{here}} for source code). Where the slope of the regression model is said to be the spring constant with the standard error of the regression model being the uncertainty in the spring's constant.
+Firstly, the spring constant is measured using a number of weights. The spring is first place horizontally on the table to determined the equilibrium position (without it being affected by its own weight). Then, the changed of length are taken from each time a mass is added on the spring when it is hung vertically. The data are recorded, and to determined the spring's constant $k$. A linear regression model from SciPy\cite{2020SciPy-NMeth} is used (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/spring.ipynb}{\textbf{here}} for source code). Where the slope of the regression model is said to be the spring constant with the standard error of the regression model being the uncertainty in the spring's constant.
 
 Two identical pendula are set up along side of each other. The spacing between the connecting rods of the pendula are adjusted to be the equilibrium position of the spring we are using. An angle to voltage transducer is used to record the amplitude as voltages and time for both of the pendula. The sampling interval is set to be 0.005 seconds. In this experiment, three different position for the spring's placement $l$ is used mainly 0.6, 0.4 and 0.2 metres.
 
@@ -134,9 +134,10 @@ To initiate the beat mode, one of the pendula must be at its maximum amplitude w
 
 The above set of three modes of measurements are carried out for three different spring distance $l$. 
 
-The data collected is processed in python (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/cp_data_analysis.html}{\textbf{here}} for source code) where a fast fourier transformed was performed using the Numpy FTT package \cite{harris2020array}, then the data are fitted with the a Lorentzian Curve. The code finally returns the data from the fit. Which I have taken the FWMH as the standard deviations (so the standard error would be half of the FWMH).  
+The data collected is processed in python (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/CP%20data%20analysis-checkpoint.ipynb}{\textbf{here}} for source code) where a fast fourier transformed was performed using the Numpy FTT package \cite{harris2020array}, then the data are fitted with the a Lorentzian Curve. The code finally returns the data from the fit. Which I have taken the FWMH as the standard deviations (so the standard error would be half of the FWMH).  
+\par\noindent\rule{\linewidth}{0.4pt}
 
-
+\section{Results \& Analysis}
 
 
 
