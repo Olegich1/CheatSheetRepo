@@ -95,18 +95,50 @@ $$\omega_o \ge \omega_n.$$
     \draw [thick,dash dot] (0,0) -- (9,0);
 \end{tikzpicture}
 
-\subsubsection{The Beat Mode}
+\subsubsection{Beat Mode}
 In this system, any oscillations between the two normal modes are a linear combination of the normal modes (they are also called the eigenstates which makes sense), and one interesting case is when the two combination contributes the same amount (imagine this as the mid point between two normal modes). And this is called the beat mode. The equation of motions governing this mode are 
 \begin{align}
     \phi_1(t) &= \frac{\phi_{\text{max}}}{2} (\cos(\omega_o t) + \cos(\omega_n t))\\
     \phi_2(t) &= -\frac{\phi_{\text{max}}}{2} (\sin(\omega_o t) - \sin(\omega_n t)).
 \end{align}
+\begin{tikzpicture}
+    \draw [thick,dash dot] (0,0) -- (9,0);
+\end{tikzpicture}
+\subsection{Coupling Factor}
+The coupling factor, is a dimensionless constant that indicates how much influence the spring has on the system of the coupled pendula. And for the first normal mode it is almost trivial for one to realise that since the spring is not contributing to the system's movement. Therefore it would be rather silly to calculate the coupling factor. However, for the second normal mode and the beat mode the coupling factor can indeed offer us some insights on the behaviour of the system. 
+
+The coupling factor for the second normal mode \cite{noauthor_coupled_nodate} and the normal mode are the same which is
+\begin{equation}
+    K_{\text{beat}} = K_{\text{out}} = \frac{\omega_o^2}{\omega_n^2+\omega_o^2}.
+\end{equation}
+The equation above immediately offered me the expectations that the slope and y-intercept from the data from trend (regression model) of the coupling factor should be identical for these two modes.
+
+And just for curiosity, let us observe what happens at the two extreme: very weak coupling and very strong coupling. Or in other words, when $l \to 0$ and $l \to \infty$. Notice that $\omega_o$ is proportional to $l$, so $\omega_o \to 0 \text{ as } l \to 0,$ and $\omega_o \to \infty \text{ as } l \to \infty$. It is not hard for us to see that the coupling factor for the extreme weak coupling case is 0 and for the extremely strong coupling case is 1, with all the possible coupling factors between 0 and 1.
 \par\noindent\rule{\linewidth}{0.4pt}
 
 \section{Method}
-Firstly, the spring constant is measured using a number of weights. The spring is first place horizontally on the table to determined the equilibrium position (without it being affected by its own weight). Then, the changed of length are taken from each time a mass is added on the spring when it is hung vertically. The data are recorded, and to determined the spring's constant $k$. A linear regression model from SciPy\cite{2020SciPy-NMeth} is used. Where the slope of the regression model is said to be the spring constant with the standard error of the regression model being the uncertainty in the spring's constant.
+Firstly, the spring constant is measured using a number of weights. The spring is first place horizontally on the table to determined the equilibrium position (without it being affected by its own weight). Then, the changed of length are taken from each time a mass is added on the spring when it is hung vertically. The data are recorded, and to determined the spring's constant $k$. A linear regression model from SciPy\cite{2020SciPy-NMeth} is used (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/springconstant.html}{\textbf{here}} for source code). Where the slope of the regression model is said to be the spring constant with the standard error of the regression model being the uncertainty in the spring's constant.
 
-Two identical pendula are set up along side of each other. The spacing between the connecting rods of the pendula are adjusted to be the equilibrium position of the spring we are using. A piece of specialised equipment is used to record the amplitude as voltages and time for both of the pendula. The sampling interval is set to be 0.005 seconds. In this experiment, three different position for the spring's placement $l$ is used mainly 0.6, 0.4 and 0.2 metres. 
+Two identical pendula are set up along side of each other. The spacing between the connecting rods of the pendula are adjusted to be the equilibrium position of the spring we are using. An angle to voltage transducer is used to record the amplitude as voltages and time for both of the pendula. The sampling interval is set to be 0.005 seconds. In this experiment, three different position for the spring's placement $l$ is used mainly 0.6, 0.4 and 0.2 metres.
+
+The angle to voltage transducer is first calibrated by setting the zero voltage position at the stationary position (where $\phi_1 =\phi_2 = 0$).
+
+\subsection{First Normal Mode}
+For the first normal mode, also known as the in-phase oscillation mode. I brought two pendula to the same amplitude by slowing displacing the pendula from their equilibrium position with my fingers whilst observing the voltage reading at the computer. Then the pendula are let go at the same time. After releasing the pendula, I then start to record the data for a period of approximately 300 seconds.
+
+\subsection{Second Normal Mode}
+The second normal mode, or the out-out-phase oscillation mode is when the two pendula started at a position where $\phi_1(0) = - \phi_2(0).$ To achieve this, I used similar technique of to bring the pendula to their desired amplitude, this time with the exact opposite voltage reading on the computer for the two pendula. Then after releasing the pendula, the data are recorded for a period of approximately 300 seconds.
+
+\subsection{Beat Mode}
+To initiate the beat mode, one of the pendula must be at its maximum amplitude whilst the other is at it's equilibrium position. This is achieved by me placing one finger on the pendula that is supposed to be locked at its position to prevent it from moving whilst I bring the other pendula to the desired amplitude. Then I let go both of my fingers at the same time. Then the data is recorded for a period of 300 seconds.
+
+The above set of three modes of measurements are carried out for three different spring distance $l$. 
+
+The data collected is processed in python (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/cp_data_analysis.html}{\textbf{here}} for source code) where a fast fourier transformed was performed using the Numpy FTT package \cite{harris2020array}, then the data are fitted with the a Lorentzian Curve. The code finally returns the data from the fit. Which I have taken the FWMH as the standard deviations (so the standard error would be half of the FWMH).  
+
+
+
+
 
 
 
