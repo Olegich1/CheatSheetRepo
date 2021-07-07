@@ -19,7 +19,7 @@
 \title{Coupled Pendula Lab Report}
 \author{J. Liang (z5261830)}
 \affiliation{Cohort B - Mon 9-12 class}
-\affiliation{Word count: XXXX words}
+\affiliation{Word count: 2071 words}
 \date{\currenttime~\today}
 \begin{abstract}
     This report presents the theory, experimental observation and interpretations of the behaviour of coupled pendula.
@@ -49,7 +49,7 @@ First, it is important for the readers to know the assumption I have established
 \subsection{Derivations}
 For the following section please refer to \textit{figure \ref{fig 1}} below for the variables that I did not specifically mentioned.
 \begin{figure}[H]
-    \includegraphics[width = 8 cm]{images/coupledpendula set up.png}
+    \includegraphics[width = 9 cm]{images/coupledpendula set up.png}
     \caption{The set up of the coupled pendula system.\citep{lab_note} \label{fig 1}}
 \end{figure}
 \begin{tikzpicture}
@@ -111,12 +111,12 @@ The coupling factor for the second normal mode \cite{noauthor_coupled_nodate} an
 \begin{equation}
     K_{\text{beat}} = K_{\text{out}} = \frac{\omega_o^2}{\omega_n^2+\omega_o^2}.
 \end{equation}
-The equation above immediately offered me the expectations that the slope and y-intercept from the data from trend (regression model) of the coupling factor should be identical for these two modes.
+The equation above immediately offered me the expectations that the slope and y-intercept from the data from trend (regression model) of the coupling factor should be identical for these two modes. Therefore, I have averaged out the coupling factor from the beat mode and the out of phase mode when calculating the trend of the experimental coupling factor.
 
 And just for curiosity, let us observe what happens at the two extreme: very weak coupling and very strong coupling. Or in other words, when $l \to 0$ and $l \to \infty$. Notice that $\omega_o$ is proportional to $l$, so $\omega_o \to 0 \text{ as } l \to 0,$ and $\omega_o \to \infty \text{ as } l \to \infty$. It is not hard for us to see that the coupling factor for the extreme weak coupling case is 0 and for the extremely strong coupling case is 1, with all the possible coupling factors between 0 and 1.
 \par\noindent\rule{\linewidth}{0.4pt}
 
-\section{Method}
+\section{Method}\label{sec:method}
 Firstly, the spring constant is measured using a number of weights. The spring is first place horizontally on the table to determined the equilibrium position (without it being affected by its own weight). Then, the changed of length are taken from each time a mass is added on the spring when it is hung vertically. The data are recorded, and to determined the spring's constant $k$. A linear regression model from SciPy\cite{2020SciPy-NMeth} is used (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/spring.ipynb}{\textbf{here}} for source code). Where the slope of the regression model is said to be the spring constant with the standard error of the regression model being the uncertainty in the spring's constant.
 
 Two identical pendula are set up along side of each other. The spacing between the connecting rods of the pendula are adjusted to be the equilibrium position of the spring we are using. An angle to voltage transducer is used to record the amplitude as voltages and time for both of the pendula. The sampling interval is set to be 0.005 seconds. In this experiment, three different position for the spring's placement $l$ is used mainly 0.6, 0.4 and 0.2 metres.
@@ -134,10 +134,70 @@ To initiate the beat mode, one of the pendula must be at its maximum amplitude w
 
 The above set of three modes of measurements are carried out for three different spring distance $l$. 
 
-The data collected is processed in python (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/CP%20data%20analysis-checkpoint.ipynb}{\textbf{here}} for source code) where a fast fourier transformed was performed using the Numpy FTT package \cite{harris2020array}, then the data are fitted with the a Lorentzian Curve. The code finally returns the data from the fit. Which I have taken the FWMH as the standard deviations (so the standard error would be half of the FWMH).  
+The data collected is processed in python (click \href{https://github.com/jojounderscorejo/CheatSheetRepo/blob/main/Otherthings/PHYS2113%20CP%20LAB/code/CP%20data%20analysis-checkpoint.ipynb}{\textbf{here}} for source code) where a fast fourier transformed was performed using the NumPy FTT package \cite{harris2020array}, then the data are fitted with the a Lorentzian Curve using Python package LMFIT\cite{lmfit}. The code returns the data from the fit. Which I have taken the FWMH as the standard deviations (so the standard error would be half of the FWMH). 
 \par\noindent\rule{\linewidth}{0.4pt}
 
 \section{Results \& Analysis}
+\subsection{The Spring constant}
+This experiment would not have gone far without the me knowing the spring constant and its uncertainty. A graph of Length v.s. Mass on the spring is presented Figure 2. 
+\begin{figure}[H]
+    \includegraphics[width = 9 cm]{images/SpringConstant.png}
+    \caption{A linear regression model for the spring constant. \label{fig 2}}
+\end{figure}
+
+Here, through the calculating the slope (times 9.8 ms$^{-2}$ to convert the mass to force). I have obtained the value of the spring constant to be 
+\[
+    k = 2.88 \pm 0.06 \text{ Nm}^{-1}.  
+\]
+
+\subsection{The Coupling Factor}
+Now, through the method I have described in the \textbf{method} section, I have calculated the theoretical angular frequency for the three different coupling difference with the aid of Wolfram Mathematica\cite{math}, and the experimental value are calculated through my Python program. 
+
+Inspecting Table \ref{table1}, I have notice there is an obvious systematic error. Where as the the theoretical value disagree with the experimental value by approximately 6\%. This disagreement is shown more with more pronunciation in figure \ref{fig3}. Where it clearly shows that the experimental value is clearly shifted upwards by approximately 6\%.
+
+\begin{figure}[H]
+    \includegraphics[width = 9 cm]{images/couplingfactor.png}
+    \caption{A linear regression model for the spring constant. \label{fig3}}
+\end{figure}
+\par\noindent\rule{\linewidth}{0.4pt}
+
+\section{DISCUSSION}
+The uncertainty I have obtained does not offer me a satisfactory explanation of what is causing this deviation.
+
+Thus, I shall now purpose a few scenarios that might have caused this systematic shift in the coupling factor;
+\begin{enumerate}[Sc. I)]
+    \item The mass of the rod was ignored in the theoretical calculation.
+    \item The Pendula are not perfectly out of sync for the both of the normal modes.
+    \item The pendula are not oscillating in the same plane.
+\end{enumerate} 
+
+Now, let us inspect the impact Sc. I has on this discrepancy. From equation \eqref{eq6}. We can determine the impact of the mass has on our system. By simply doing some trial calculation by substituting different $m$ in the theoretical calculation for $\omega_o$. I was only able to get a 6\% deviation for $\omega_o$ with 300\% of the original mass. Which clearly suggested to me that the mass of the rod has little to none effect on this double pendula system. 
+
+Hence, Scenario I is deemed to in-sufficient to explain the deviation in our data. 
+
+For the discussion regarding to Sc. II, I shall present you with the frequency domain graph for one of the oscillation.
+\begin{widetext}
+
+\begin{figure}[H]
+    \includegraphics[width = 18 cm]{images/LM1.png}
+    \caption{Frequency domain for the first normal mode for 0.6 m spring position. \label{fig4}}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width = 18 cm]{images/LM2.png}
+    \caption{Frequency domain for the second normal mode for 0.6 m spring position. \label{fig5}}
+\end{figure}
+\end{widetext}
+
+Upon inspecting Figure \ref{fig4} and Figure \ref{fig5}, it is obvious there indeed is a small peak presenting in the this frequency domain graph. From the theoretical calculation, it is clear that for both of the first and second normal mode. There should only be only one angular frequency that governs the equation of motion.
+
+Figure \ref{fig4} and Figure \ref{fig5} are suggesting to me that there exists a consistent discrepancy for the initial value for both of these cases (i.e. I have not let go my hands simultaneously where one pendulum is a bit ``ahead'' of the other). 
+
+However, the impact of this discrepancy between the assumption and the experimental condition is yet to be determined by me.
+\par\noindent\rule{\linewidth}{0.4pt}
+
+\section{Conclusion}
+Based on the data on I have obtained, the experiment cannot be used to conclude or characterise the behaviour of the coupled pendula due to the large discrepancy between the experiment value and the theoretical calculations. However, if possible. Further measurements can be obtained in the lab and improvement can be made in regards to the measurement methods and therefore more meaningful ideas and conclusions can be extracted.
 
 
 
@@ -146,27 +206,7 @@ The data collected is processed in python (click \href{https://github.com/jojoun
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\newpage
 \bibliographystyle{agsm}
 \bibliography{cp.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,9 +224,17 @@ The data collected is processed in python (click \href{https://github.com/jojoun
 \subsection{Experiment Data and Source Codes}
 For the experiment data and the source code please visit this \href{https://github.com/jojounderscorejo/CheatSheetRepo/tree/main/Otherthings/PHYS2113%20CP%20LAB}{\textbf{link}}.
 
-\subsection{Figures}
-
-
-
+\section{Tables}
+\begin{table}[H]
+\centering
+\caption{Theoretical v.s Experimental Values}
+\begin{tabular}{|l|l|l|l|l|} \hline
+\begin{tabular}[c]{@{}l@{}}Coupling length \\l (m)\\\end{tabular} & \begin{tabular}[c]{@{}l@{}}Theoretical \\Out of Phase \\Ag. Freq.\\(rad/s)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Experimental\\Out of Phase \\Ag. Freq.\\(rad/s)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Theoretical Beat Mode Ag. Freq. \\(rad/s)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Experimental Out of Phase Ag. Freq\\(rad/s)\end{tabular} \\ \hline
+0.2 & $3.20 \pm 0.10$ & $3.09 \pm 0.3$ & $\omega_n = 3.18 \pm 0.10 \;\&\; \omega_p = 3.20 \pm 0.10$ & N/A \\ \hline
+0.4 & $3.25 \pm 0.10$ & $3.02\pm 0.01$ & $\omega_n = 3.18 \pm 0.10 \;\&\; \omega_p = 3.27 \pm 0.11$ & $\omega_n = 2.88 \pm 0.03\;\&\; \omega_p = 3.01\pm 0.02$ \\ \hline
+0.6 & $3.35 \pm 0.11$ & $3.14\pm 0.1$ & $\omega_n = 3.18 \pm 0.10 \;\&\; \omega_p = 3.36 \pm 0.11$ & $\omega_n = 2.87 \pm 0.03\;\&\; \omega_p = 3.16\pm 0.03$ \\ \hline
+\end{tabular}
+\label{table1}
+\end{table}
 
 \end{document}
