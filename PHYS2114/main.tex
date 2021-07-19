@@ -13,6 +13,13 @@
 \usepackage{esint}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
 \usepackage{float}
 \graphicspath{{./images/}}
 
@@ -104,7 +111,7 @@ The following are some common vector operators
 \begin{align*}
     &\text{Gradient:} &\grad t  &= \pdv{t}{s}\hat{s}+\frac{1}{s}\pdv{t}{\phi}\hat{\phi}+\pdv{t}{z}\hat{z},\\[1em]
     %
-    &\text{Divergence:} &\grad\cdot\vec{v} &= \frac{1}{s}\pdv{}{s}(sv_s)+\frac{1}{s}\pdv{v_\phi}{\phi}+\pdv{v_z}{z},\\[1em]
+    &\text{Divergence:} &\grad\cdot\vec{v} &= \frac{1}{s}\pdv{v_s}{s}(sv_s)+\frac{1}{s}\pdv{v_\phi}{\phi}+\pdv{v_z}{z},\\[1em]
     %
     &\text{Curl:} &\grad \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
     %
@@ -356,17 +363,18 @@ And Gauss' law reads
 \end{align}
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Linear Dielectrics}
-Iff a space that is entirely filled with a homogeneous linear dielectric, then 
+Iff a space that is entirely filled with a homogeneous linear dielectric, then  
 \begin{align*}
     \div \vec{D} = \rho_f &&\text{and}&& \curl \vec{D} =0.
 \end{align*}
-
 And, also
 \[
-    \vec{D} = \varepsilon_0 \vec{E}_{\text{vac}}
+    \vec{D} = \varepsilon \vec{E}
 \]
-where $\vec{E}_{\text{vac}}$ is the filed the same free charge would produce in the absence of dielectric.
-
+where
+\begin{equation}
+    \varepsilon = \epsilon_0(1+\chi_e)
+\end{equation}
 So, we can conclude that
 \begin{equation}
     \vec{E} = \frac{1}{\varepsilon} \vec{D} = \frac{1}{\varepsilon_r}\vec{E}_{\text{vac}}.
@@ -446,12 +454,18 @@ And since $\vec{A}$ is divergenceless, the Amepere's law for $\vec{A}$ is then
     \laplacian\vec{A} = - \mu_0 \vec{J}.
 \end{equation}
 
-Now let's look at the vector potential for line, volume and surface current respectively
+Now let's look at the vector potential for line, volume and surface current respectively (please be aware that these three equations only works if $\vec{A} \to 0 \text{ as } \curly{r} \to \infty.$)
 \begin{align}
     &\text{Line Current:} &&\vec{A} = \frac{\mu_0}{4 \pi} \int \frac{\vec{I}}{\curly{r}}\dmr{l'} = \frac{\mu_0 I }{4 \pi} \int \frac{1}{\curly{r}}\dmr{l'};\\
     &\text{Surface Current:} &&\vec{A} = \frac{\mu_0 }{4 \pi} \int \frac{\vec{K}}{\curly{r}}\dmr{a'};\\
     &\text{Volume Current} &&\vec{A} = \frac{\mu_0}{4 \pi}\int \frac{\vec{J}(\vec{r'})}{\curly{r}}\dmr{\tau'}.
 \end{align}
+
+If the current does not go to zero at infinity we can consider using the following
+\begin{equation}
+    \oint\vec{A}\cdot\dmr{\vec{l}} = \int (\curl \vec{A}) \cdot \dmr{\vec{a}} = \int \vec{B}\cdot \dmr{\vec{a}} = \Phi.
+\end{equation}
+It is worthy to know that the $\Phi$ here is the magnetic flux.
 
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Summary And Magnetostatics Boundary Conditions}
@@ -471,7 +485,7 @@ Further on, know that the flux is just the contour integral of $\vec{A}$
 \end{equation}
 It is worth to note that the derivative of $\vec{A}$ inherits the discontinuity of $\vec{B}$:
 \begin{equation}
-    \pdv{\vec{A}_{\text{above}}}{n} -\pdv{\vec{A}_{\text{below}}}{n} = -\mu_0 \vec{K}.
+    \pdv{\vec{A}_{\text{above}}}{n} -\pdv{\vec{A}_{\text{below}}}{n} = -\mu_0 \vec{K},
 \end{equation}
 
 
@@ -486,17 +500,109 @@ where $\vec{m}$ is the magnetic dipole moment:
     \vec{m} = I \vec{a}. 
 \end{equation}
 
+Let's consider a very simple case where we have the dipole at the origin with $\vec{m}$ points at the z-direction. 
 
+\begin{equation}
+    \vec{A}_{\text{dip}}(\vec{r}) = \frac{\mu_0}{4 \pi} \frac{m \sin \theta}{r^2} \boldsymbol{\hat{\phi}}.\label{573}
+\end{equation}
+and subsequently
+\begin{equation}
+    \vec{B}_{\text{dip}}(\vec{r}) = \curl \vec{A} = \frac{\mu_0 m}{4 \pi r^3}(2\cos\theta \hat{r} + \sin \theta \boldsymbol{\hat{\theta}}) = \frac{\mu_0}{4\pi} \frac{1}{r^3}[3(\vec{m\cdot \hat{r}})\hat{r} - \vec{m}].
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
 
+\section{Magnetic Fields in Matter}
+\subsection{Torques and Forces on Magnetic Dipoles}
+The say we have current loop 1 and current loop 2, we can write down the expression for the torque experienced by current loop 1 due to current loop 2 as 
+\begin{equation}
+    \vec{N} = \vec{m}_1 \cross \vec{B}_2,
+\end{equation}
+where $\vec{m} = I\vec{a}$ is the magnetic dipole moment of the loop.
 
-
-
-
-
-
-
+And say if the loop we are dealing with is infinitesimally small, we can express the force as
+\begin{equation}
+    \vec{F} = \grad(\vec{m}\cdot\vec{B}).
+\end{equation}
 
 \par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Bound Currents}
+For a volume that have a dipole moment per unit $\vec{M}$, we can just obtain the the vector potential field $A$ by integrating over eq. \ref{573} over the entire volume and obtain
+\begin{equation}
+    \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\int\frac{\vec{M}(\vec{r}')\cross \hat{\curly{r}}}{\curly{r}^2}\dmr{\tau'}
+\end{equation}
+
+However, we can pull some sick trick\footnote{See Griffths' pg. 264} and get the following
+\begin{equation}
+    \vec{A}(\vec{r}) = \frac{\mu_0}{4\pi}\int_{\mathcal{V}}\frac{\vec{J}_b(\vec{r}')}{\curly{r}}\dmr{\tau'}+\frac{\mu_0}{4\pi}\oint_{\mathcal{S}}\frac{\vec{K}_b(\vec{r}')}{\curly{r}}\dmr{a'}
+\end{equation} 
+with 
+\begin{align*}
+    \vec{J}_b = \curl\vec{M} && \vec{K}_b = \vec{M}\cross\hat{n}.
+\end{align*}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{The Auxiliary Field H}
+To be very concise, the volume current is made up of two component, namely the bound current due to the the conspiracy of many aligned atomic dipoles, and the free current due to an external source (e.g. battery)
+\begin{equation}
+    \vec{J} = \vec{J}_b + \vec{J}_f.
+\end{equation}
+
+And the auxiliary field is said to be 
+\begin{equation}
+    \vec{H} = \frac{1}{\mu_0}\vec{B} - \vec{M}.
+\end{equation}
+
+In terms of $\vec{H}$, the Ampere's law reads that
+\begin{equation}
+    \curl \vec{H} = \vec{J}_f, \label{633}
+\end{equation}
+or, in the integral form
+\begin{equation}
+    \oint \vec{H}\cdot\dmr{\vec{l}} = I_{f_{\text{enc}}}. \label{634}
+\end{equation}
+\textbf{VERY IMPORTANT NOTE:} if there is not a clear established symmetry of the system. Then it is worth to just avoid using eq. \ref{633} \& \ref{634}.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Boundary Conditions}
+In terms of $\vec{H}$,
+\begin{align}
+    H_{\text{above}}^{\bot} - H_{\text{below}}^{\bot} &= -(M_{\text{above}}^{\bot}-M_{\text{below}}^{\bot});\\
+    \vec{H}_{\text{above}}^{\parallel} - \vec{H}_{\text{below}}^{\parallel} &= \vec{K}_f \cross \hat{n}.
+\end{align}
+
+In terms of $\vec{B}$,
+\begin{align}
+    B_{\text{above}}^{\bot} - B_{\text{below}}^{\bot} &= 0;\\
+    \vec{B}_{\text{above}}^{\parallel} - \vec{B}_{\text{below}}^{\parallel} &= \mu_0(\vec{K}\cross \hat{n}).
+\end{align}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Magnetic Susceptibility and Permeability}
+For most substances the magnetisation is proportional to the field, so we write
+\begin{equation}
+    \vec{M} = \chi_m \vec{H}.\label{651}
+\end{equation}
+Where $\chi_m$ is called the \textbf{magnetic susceptibility}
+
+Materials that obey eq. \ref{651} are called linear media and we can write down their magnetic field as the following
+\begin{equation}
+    \vec{B} = \mu_0(\vec{H} + \vec{M}) = \mu_0(1+\chi_m)\vec{H}.
+\end{equation}
+
+And just because we can, let's call the \textbf{permeability} of the material $\mu$ and we can write the following
+\begin{equation}
+    \vec{B} = \mu \vec{H}.
+\end{equation}
+where 
+\begin{equation}
+    \mu = \mu_0(1+\chi_m)
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\section{Electrodynamics}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section*{References}
