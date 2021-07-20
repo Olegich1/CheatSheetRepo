@@ -113,7 +113,7 @@ The following are some common vector operators
     %
     &\text{Divergence:} &\grad\cdot\vec{v} &= \frac{1}{s}\pdv{v_s}{s}(sv_s)+\frac{1}{s}\pdv{v_\phi}{\phi}+\pdv{v_z}{z},\\[1em]
     %
-    &\text{Curl:} &\grad \cross \vec{v} &= \left(\pdv{v_z}{y}-\pdv{v_y}{z}\right)\hat{x} + \left(\pdv{v_x}{z}-\pdv{v_z}{x}\right)\hat{y} + \left(\pdv{v_y}{x}-\pdv{v_x}{y}\right)\hat{z},\\[1em]
+    &\text{Curl:} &\curl \vec{v} &= \left(\frac{1}{s} \pdv{v_z}{\phi} - \pdv{v_{\phi}}{z} \right)\hat{s} + \left(\pdv{v_{s}}{z} - \pdv{v_z}{s} \right)\hat{\phi} + \frac{1}{s}\left(\pdv{(s v_{\phi})}{s} - \pdv{v_s}{\phi}\right)\hat{z},\\[1em]
     %
     &\text{Laplacian:} &\laplacian t &= \frac{1}{s}\pdv{}{s}\left(s\pdv{t}{s}\right)+\frac{1}{s^2}\pdv[2]{t}{\phi}+\pdv[2]{t}{z}. 
 \end{align*}
