@@ -602,6 +602,63 @@ where
 \par\noindent\rule{\textwidth}{0.4pt}
 
 \section{Electrodynamics}
+\subsection{Faraday's Law}
+Faraday's law reads (well, this is actually Lenz' law because of the minus in front of the equation)
+\begin{equation}
+    \mathcal{E} = -\pdv{\Phi}{t}.
+\end{equation}
+where $\mathcal{E}$ is emf enclosed by the contour $\gamma$, so we can write $\Phi$ as 
+\begin{equation}
+    \Phi = \int_{\gamma} \vec{B} \cdot \dmr{\vec{A}}.
+\end{equation}
+And what do you know, there is an integral form of Faraday's law, and it reads
+\begin{equation}
+    \mathcal{E} = \oint_{\gamma} \vec{E} \cdot \dmr{\vec{l}} = -\int_{\gamma} \pdv{\vec{B}}{t}\cdot \dmr{\vec{A}}.\label{713}
+\end{equation}
+Note here the direction of the contour and/or the surface normal vector is determined by the right hand grip rule.
+
+Applying Stokes' theorem to eq. \ref{713}, we have
+\begin{equation}
+    \oint_{\gamma} \vec{E} \cdot \dmr{\vec{l}} = \int_{\gamma} \left[\curl\vec{E}\right]\cdot\dmr{\vec{A}}.
+\end{equation}
+Now, we notice our first Maxwell's equation
+\begin{equation}
+    \curl\vec{E} = -\pdv{\vec{B}}{t}.
+\end{equation}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Inductance}
+Inductance is nothing fancy but the ratio between the flux and then current
+\begin{equation}
+    \Phi = L\cdot I.
+\end{equation}
+
+For time dependent current, 
+\begin{equation}
+    \mathcal{E} = -\pdv{\Phi}{t} = -L\dv{I}{t}.
+\end{equation}
+
+\subsubsection{Mutal Inductance}
+Suppose we have two loops, $L_1$ and $L_2$, which they stack on top of each other. Each carry current $I_1$ and $I_2$ respectively. We know perfectly well that $L_1$ will generate a magnetic field $B_1$, and this magnetic field is going to go through $L_2$. Therefore generating a flux $\Phi_{21}$.
+
+And we will have such a relation that states
+\begin{align*}
+    \Phi_{21} = M_{21} I_{1}, && \Phi_{12} = M_{12} I_{2}.
+\end{align*}
+Where $M_{21]}$ and $M_{12}$ are the mutual inductance. Note that the mutual inductance must be the same so $M_{12} = M_{21}$.
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
