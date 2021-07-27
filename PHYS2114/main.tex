@@ -648,6 +648,144 @@ And we will have such a relation that states
 \end{align*}
 Where $M_{21]}$ and $M_{12}$ are the mutual inductance. Note that the mutual inductance must be the same so $M_{12} = M_{21}$.
 
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\section{Kirchhoff's laws \& Impedance}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\section{Maxwell's Equations and its Consequences}
+\subsection{Some Remainders}
+Remember the electric charge inside a closed surface is equal to
+\begin{equation}
+    q_{\text{total}} = \int_{\mathcal{V}}\rho \dmr{V},
+\end{equation}
+where $\rho$ is the volume charge density. And naturally we can say that the flux of charge $\dot{Q}$ is 
+\begin{equation}
+    \dot{Q} = \int_{\mathcal{V}} \pdv{\rho}{t} \dmr{V} = -\int_{\mathcal{S}} \vec{J} \cdot \dmr{\vec{A}}.
+\end{equation}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Maxwell's Equations}
+\begin{align}
+    &\div \vec{E} = \frac{\rho}{\varepsilon_0},\\
+    &\div \vec{B} = 0,\\
+    &\curl \vec{E} = -\pdv{\vec{B}}{t},\\
+    &\curl \vec{B} = \mu_0 \vec{J} + \mu_0 \varepsilon_0 \pdv{\vec{E}}{t}.\label{924}
+\end{align}
+
+Let me just remind you that when dealing with stationary E field, we can omit the last term in Eq. \ref{924}.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{Poynting's Vector}
+Poynting did some big brain stuff here this is what he got for us
+\begin{equation}
+    \pdv{}{t} \left(\frac{\varepsilon_0 E^2}{2} + \frac{B^2}{2\mu_0}\right) = -\vec{J} \cdot \vec{E} - \div \vec{S},\label{931}
+\end{equation}
+where $\vec{S}$ is the Poynting's vector and it is defined as followed
+\begin{equation}
+    \vec{S} = \frac{1}{\mu_0} [\vec{E} \cross \vec{B}].
+\end{equation}
+
+If we integrate eq. \ref{931} over some arbitrary volume $\mathcal{V}$, we obtain
+\begin{equation}
+    \pdv{}{t} \int_{\mathcal{V}} \left(\frac{\varepsilon_0 E^2}{2} + \frac{B^2}{2\mu_0}\right) = -\int_{\mathcal{V}} \vec{J} \cdot \vec{E} - \int_{\mathcal{S}} \vec{S}\cdot\dmr{\vec{A}}.
+\end{equation}
+Here let me stress that this equation is the conservation of energy equation. The left hand side represent the power (change in energy over time) this Electromagnetic field carries. And the first term on the right hand side represents the \textbf{work done by the field on the electric current that flows inside the volume}. The second term on the right hand side is the outflux of energy through the surface. And the Poynting's vector $\vec{S}$ is the \textbf{density of the energy flux}.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Maxwell's Equations in Linear Dielectrics}
+The Maxwell's equation in linear dielectrics is presented as the following
+\begin{align}
+    &\vec{D} = \varepsilon_0 \vec{E},\\
+    &\vec{B} = \mu_0 \vec{H},\\
+    &\div \vec{D} = \rho_f,\\
+    &\div \vec{B} = 0,\\
+    &\curl \vec{E} = -\frac{\vec{B}}{t},\\
+    &\curl \vec{H} = \vec{J} + \pdv{\vec{D}}{t}.
+\end{align}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Skin Effect}
+Skin effect is only relevant when the transverse geometric scales of the conductor we are talking about is much smaller than the wavelength of the magnetic wave
+\begin{equation}
+    l \ll \lambda.
+\end{equation}
+
+Consider the Maxwell's equations for stationary E field and the Ohm's law $\vec{J} = \sigma \vec{E}$. We can obtain the following equations
+\begin{equation}
+    \vec{B} = \vec{b}\exp(-i\omega t)
+\end{equation}
+And to obtain skin effect penetration depth we can just solve the following equation
+\begin{equation}
+    \laplacian \vec{b} = -i \mu_0 \sigma \omega \vec{b}.
+\end{equation}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Scalar \& Vector Potential}
+Just so you know we can write the Maxwell's equations in terms scalar and vector potential only
+\begin{equation}
+    \left( \mu_0 \varepsilon_0 \pdv[2]{}{t}\vec{A} - \laplacian \vec{A}   \right) + \grad \left( \div \vec{A} \mu_0 \varepsilon_0 \pdv[2]{}{t} V \right)
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
