@@ -653,6 +653,61 @@ Where $M_{21]}$ and $M_{12}$ are the mutual inductance. Note that the mutual ind
 
 \section{Kirchhoff's laws \& Impedance}
 
+\subsection{For DC Circuits}
+Conservation of electric charge,
+\begin{equation}
+    \sum I_k = 0.
+\end{equation}
+Which means that the sum of electric charge at each junction is precisely zero.
+
+Voltage drop in every loop is equal to the emf in the loop
+\begin{equation}
+    \sum I_i R_i  = \mathcal{V}.
+\end{equation}
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{For AC Circuits}
+Note that Kirchhoff's law for AC circuits only applied to lumped circuits, which means the size of the circuit $l_c$ is much smaller than the Electromagnetic wave length
+\begin{equation}
+    l_c \ll \lambda = \frac{c}{f}.
+\end{equation}
+
+However, Kirchhoff's law still reads the same for AC as it for DC circuits.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\subsection{RLC Circuit}
+Note that the equation describing the RLC circuit is as follow
+\begin{equation}
+    L \dv[2]{I}{t} +R \dv{I}{t} + \frac{1}{C} I = \dv[]{\mathcal{V}}{t}.
+\end{equation}
+This can be easily solved, so I will not typed up all the possible solutions.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\subsection{Complex Impedance}
+Just know that in a RLC circuit, there exist an Impedance $Z$ such that 
+\begin{equation}
+    Z = R + i \omega L + \frac{1}{i \omega C}.
+\end{equation}
+
+As you might have noticed now, that inductance and capacitor both contribute to the imaginary part to the impedance, and we name them reactance. 
+
+Note that the complex impedance behave similar to how resistance behaves in circuits.
+
+\subsection{Power}
+Since both current and voltage have imaginary part so it is important to separate them out when calculating power
+\begin{equation}
+    P(t) = \real[I(t)]\real[\mathcal{V}(t)].
+\end{equation}
+
+
+
+
+
+
+
+
+
+
 \par\noindent\rule{\textwidth}{0.4pt}
 \par\noindent\rule{\textwidth}{0.4pt}
 
