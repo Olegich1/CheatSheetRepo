@@ -725,13 +725,19 @@ where $\rho$ is the volume charge density. And naturally we can say that the flu
 \par\noindent\rule{\textwidth}{0.4pt}
 \subsection{Maxwell's Equations}
 \begin{align}
-    &\div \vec{E} = \frac{\rho}{\varepsilon_0},\\
+    &\div \vec{E} = \frac{\rho}{\varepsilon_0},\label{921}\\
     &\div \vec{B} = 0,\\
     &\curl \vec{E} = -\pdv{\vec{B}}{t},\\
     &\curl \vec{B} = \mu_0 \vec{J} + \mu_0 \varepsilon_0 \pdv{\vec{E}}{t}.\label{924}
 \end{align}
 
 Let me just remind you that when dealing with stationary E field, we can omit the last term in Eq. \ref{924}.
+
+It is worthy to note that we can write Eq. \ref{921} and \ref{924} in the forms of scalar and vector potential only
+\begin{align}
+    \text{Eq. \ref{921}} &\implies -\laplacian V - \pdv{}{t} \left(\div \vec{A}\right) = \frac{\rho}{\varepsilon_0};\\
+    \text{Eq. \ref{924}} &\implies \left(\mu_0 \varepsilon_0 \pdv[2]{}{t}\vec{A} - \laplacian \vec{A} \right) + \grad \left(\div \vec{A} + \mu_0 \varepsilon_0 \pdv{}{t} V\right) = \mu_0 \vec{J}.
+\end{align}
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
