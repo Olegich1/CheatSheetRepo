@@ -104,20 +104,20 @@ we can establish the following
 \begin{equation}
     \Phi(x) = q \underbrace{\frac{1}{4\pi\varepsilon_0}\frac{1}{\abs{\curly{r}}}}_{=G_0(\curly{r})} + \phi_s
 \end{equation}
-Here, $G_0$ is call ed the \textbf{free-space Green's function}. Free-space implies that $\Phi(\vec{x}) \to 0$ as $\curly{r} \to \infty$. In other words, $G_0$ is the solution of 
+Here, $G_0$ is called the \textbf{free-space Green's function}. Free-space implies that $\Phi(\vec{x}) \to 0$ as $\curly{r} \to \infty$. In other words, $G_0$ is the solution of
 \begin{equation}
-    \laplacian G(\curly{r}) = -\frac{1}{\varepsilon_0} \delta(\curly{r})
+    \laplacian G(\curly{r}) = -\frac{1}{\varepsilon_0} \delta(\curly{r}) \label{eqn:Gfn5}
 \end{equation}
 in the volume $V$, subject to the boundary condition (\ref{eqn:bcFreespace}) with $\phi_s = 0$.
 
-Now, consider a collection of point charges $q_i$ at $\vec{x_i}$ where $\vec{x_i} \in V$ subject to the same boundary condition (\ref{eqn:bcFreespace}). Then by the principle of superposition 
+Now, consider a collection of point charges $q_i$ at $\vec{x_i}$ where $\vec{x_i} \in V$ subject to the same boundary condition (\ref{eqn:bcFreespace}). Then by the principle of superposition
 \begin{equation}
     \laplacian \Phi_{\text{total}}(\vec{x}) = \sum_{i = 1}^{N}\laplacian\Phi(\vec{x}) = - \sum_{i = 1}^{N} \frac{q_i}{\varepsilon_0} \delta(\curly{r}),
 \end{equation}
-and the solution is 
+and the solution is
 \begin{subequations}
     \begin{align}
-        \Phi_{\text{total}}(\vec{x}) = \sum_{i = 1}^{N} \Phi_i(\vec{x}) = \sum_{i = 1}^{N} q_i G_0 + \phi_s\\ 
+        \Phi_{\text{total}}(\vec{x}) = \sum_{i = 1}^{N} \Phi_i(\vec{x}) = \sum_{i = 1}^{N} q_i G_0 + \phi_s \\
         \implies \text{Continuum Limit} = \iiint_{V} \rho(\vec{x'}) G_0 + \phi_s \dmr{\vec{V}}.
     \end{align}
 \end{subequations}
@@ -128,19 +128,33 @@ Thus, Green's function is essentially the linear response of the system at $\vec
 The previous example is simple because the boundary conditions are trivial. In order to obtain the general Green's function solution for arbitrary boundary conditions, we need to use the first and second Green's identities.
 \begin{subequations}
     \begin{align}
-        &\iiint_{V}\left[\Phi\laplacian\Psi + \grad\Phi \cdot \grad\Psi\right] \dmr{\vec{V}} = \oiint_S (\Phi\grad\Psi)\cdot\dmr{\vec{S}} \label{eqn:G1ID}\\
-        &\iiint_{V}\left[\Phi\laplacian\Psi - \Psi\laplacian\Phi\right] \dmr{\vec{V}} = \oiint_S \left[ \Phi\grad\Psi - \Psi\grad\Phi \right] \cdot \dmr{\vec{S}}; \label{eqn:G2ID}
+         & \iiint_{V}\left[\Phi\laplacian\Psi + \grad\Phi \cdot \grad\Psi\right] \dmr{\vec{V}} = \oiint_S (\Phi\grad\Psi)\cdot\dmr{\vec{S}} \label{eqn:G1ID}                          \\
+         & \iiint_{V}\left[\Phi\laplacian\Psi - \Psi\laplacian\Phi\right] \dmr{\vec{V}} = \oiint_S \left[ \Phi\grad\Psi - \Psi\grad\Phi \right] \cdot \dmr{\vec{S}}; \label{eqn:G2ID}
     \end{align}
 \end{subequations}
-Where $\Phi$ and $\Psi$ are scalar functions, and the identities follow essentially from the divergence theorem. 
+Where $\Phi$ and $\Psi$ are scalar functions, and the identities follow essentially from the divergence theorem.
 
-Now, let $\Phi$ be the potential and $\Psi(\vec{x}) = G(\vec{x'}, \vec{x})$. Then the second identity (\ref{eqn:G2ID}) becomes
+Now, let $\Phi$ be the potential and $\Psi(\vec{x}) = G(\vec{x}, \vec{x'})$. Then the second identity (\ref{eqn:G2ID}) becomes
 \begin{equation}
     \begin{split}
         \iiint_{V} \Phi(\vec{x'}) \nabla^{'2} G &\dmr{\vec{V}} \\
-        &= \iiint_{V} G \nabla^{'2} \Phi(\vec{x'}) \dmr{\vec{V}} + \oiint_S \left[ \Phi(\vec{x'}) \grad' G - G\grad'\Phi(\vec{x'})  \right] \dmr{\vec{S}}.
+        &= \iiint_{V} G \nabla^{'2} \Phi(\vec{x'}) \dmr{\vec{V}} + \oiint_S \left[ \Phi(\vec{x'}) \grad' G - G\grad'\Phi(\vec{x'})  \right] \dmr{\vec{S}}. \label{eqn:Green9}
     \end{split}
 \end{equation}
-
-
+Now, using Eqn.~\ref{eqn:Gfn5}, we arrive at
+\begin{equation}
+    \iiint_{V} \Phi(\vec{x'}) \nabla^{'2} G \dmr{\vec{V}} = -\frac{1}{\varepsilon_0}\iiint_V \Phi(\vec{x'})\delta(\vec{x}-\vec{x'})\dmr{\vec{V}} = -\frac{1}{\varepsilon_0}\Phi(\vec{x}). \label{eqn:Green10}
+\end{equation}
+And, by Possion's equation $\laplacian\Phi = - \frac{\rho}{\varepsilon_0}$, we have
+\begin{equation}
+    \iiint_{V} G \nabla^{'2} \Phi(\vec{x'}) \dmr{\vec{V}} = -\frac{1}{\varepsilon_0}\iiint_V G(\vec{x},\vec{x'})\rho(\vec{x'})\dmr{\vec{V}}. \label{eqn:Green11}
+\end{equation}
+Thus, using Eqn.~\ref{eqn:Green10} \& Eqn.~\ref{eqn:Green11}, Eqn.~\ref{eqn:Green9} becomes
+\begin{equation}
+    \begin{split}
+        \Phi(\vec{x}) = \iiint_V \rho(\vec{x'})G(\vec{x}, \vec{x'}) \dmr{\vec{V}} &- \varepsilon_0 \oiint_S\nabla'G(\vec{x}, \vec{x'})\Phi(\vec{x'})\cdot\dmr{\vec{S}}\\
+        &+ \varepsilon_0\oiint_S\nabla'\Phi(\vec{x'})G(\vec{x}, \vec{x'})\cdot\dmr{\vec{S}}.
+    \end{split}
+\end{equation}
+This is known as the solution for the \textbf{general Green's function}.
 \end{document}

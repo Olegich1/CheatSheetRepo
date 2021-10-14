@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.22)  14 OCT 2021 15:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.22)  15 OCT 2021 00:04
 entering extended mode
 **"c:/Users/joeyl/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS3114/Lecture 1/lecture1.tex"
 (c:/Users/joeyl/Desktop/Uni/CheatSheetRepo/CheatSheetRepo/PHYS3114/Lecture 1/lecture1.tex
@@ -706,7 +706,7 @@ LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.106 \end{equation}
-                     <./images//chargeinV.png>] [3] (lecture1.aux)
+                     <./images//chargeinV.png>] [3] [4] (lecture1.aux)
 Package rerunfilecheck Info: File `lecture1.out' has not changed.
 (rerunfilecheck)             Checksum: 267A6D8DD182AEE68B3A0453A1B719C5;649.
 Package logreq Info: Writing requests to 'lecture1.run.xml'.
@@ -714,17 +714,17 @@ Package logreq Info: Writing requests to 'lecture1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19156 strings out of 478927
- 315258 string characters out of 2859095
- 1079527 words of memory out of 3000000
- 36722 multiletter control sequences out of 15000+600000
+ 19164 strings out of 478927
+ 315351 string characters out of 2859095
+ 1083697 words of memory out of 3000000
+ 36726 multiletter control sequences out of 15000+600000
  417313 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,20n,81p,819b,1742s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\joeyl\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi720\esint10.pk> <C:\Users\joeyl\AppData\Local\MiKTeX\fonts/pk/ljfour/public/calligra/dpi736\callig15.pk> <C:\Users\joeyl\AppData\Local\MiKTeX\fonts/pk/ljfour/public/calligra/dpi1104\callig15.pk><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/program files/miktex_64_bit/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on lecture1.pdf (4 pages, 203686 bytes).
+Output written on lecture1.pdf (5 pages, 207727 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
