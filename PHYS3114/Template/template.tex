@@ -1,0 +1,73 @@
+%__________________________________PREAMBLE_________________________________%
+\documentclass[12pt,english]{article}
+\usepackage[a4paper, left = 2cm,%
+            right=2cm,top=2cm,bottom=2cm,%
+            footskip=.25in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, physics}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[backend=biber, citestyle=nature]{biblatex}
+\usepackage[nottoc]{tocbibind}
+\usepackage{indentfirst, halloweenmath, calligra, %
+            esint, graphicx, hyperref, xcolor, float}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+\graphicspath{{./images/}}
+%__________________________________COMMANDS_________________________________%
+\addbibresource{ref.bib}
+%_____________
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0em}
+%_____________
+\newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
+\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy integral command
+%_____________
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.3]callig15}{}
+\newcommand{\curly}[1]{\ensuremath{\mathcalligra{#1}}}
+%_____________
+\let\oldhat\hat
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\renewcommand{\hat}[1]{\oldhat{\boldsymbol{#1}}}
+\newcommand{\ar}[1]{\overset{\rightharpoonup}{#1}}
+%_____________
+\newcommand{\comment}[1]{}
+%___________________________________________________________________________%
+\title{\textbf{Template}\\ 
+\large Template\\ 
+\small Lecture number here}
+\date{\today}
+% \author{Joey Liang}
+\begin{document}
+%_______________________________Title Page__________________________________%
+\pagenumbering{gobble}
+\begin{titlepage}
+    \maketitle
+    \vfill
+    \emph{DISCLAIMER: I, Jiongyu Liang, am NOT the original authour of the content presented %
+    below, the following is just electronic type-up of the lecture note produced %
+    by Dr. Oleg Tretiakov.}
+\end{titlepage}
+\cleardoublepage
+\pagenumbering{arabic}
+%__________________________________TOC______________________________________%
+\newpage
+\tableofcontents
+\newpage
+%_______________________________DOCUMENT____________________________________%
+
+\newpage
+
+
+
+
+
+
+
+
+
+\end{document}

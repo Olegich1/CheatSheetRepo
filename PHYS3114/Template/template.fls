@@ -1,7 +1,7 @@
-PWD c:\Users\joeyl\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS3114\Lecture 1
+PWD c:\Users\joeyl\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS3114\Template
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\joeyl\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS3114\Lecture 1\lecture1.tex
-OUTPUT lecture1.log
+INPUT c:\Users\joeyl\Desktop\Uni\CheatSheetRepo\CheatSheetRepo\PHYS3114\Template\template.tex
+OUTPUT template.log
 INPUT c:\program files\miktex_64_bit\tex\latex\base\article.cls
 INPUT c:\program files\miktex_64_bit\tex\latex\base\article.cls
 INPUT c:\program files\miktex_64_bit\tex\latex\base\article.cls
@@ -713,10 +713,10 @@ INPUT c:\program files\miktex_64_bit\tex\latex\float\float.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\float\float.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\float\float.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\float\float.sty
-INPUT .\lecture1.aux
-INPUT lecture1.aux
-INPUT lecture1.aux
-OUTPUT lecture1.aux
+INPUT .\template.aux
+INPUT template.aux
+INPUT template.aux
+OUTPUT template.aux
 INPUT c:\program files\miktex_64_bit\tex\latex\biblatex\lbx\english.lbx
 INPUT c:\program files\miktex_64_bit\tex\latex\biblatex\lbx\english.lbx
 INPUT c:\program files\miktex_64_bit\tex\latex\biblatex\lbx\english.lbx
@@ -734,13 +734,13 @@ INPUT c:\program files\miktex_64_bit\tex\latex\biblatex\blx-case-expl3.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\biblatex\blx-case-expl3.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\l3kernel\expl3.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\l3packages\xparse\xparse.sty
-OUTPUT lecture1.bcf
-INPUT lecture1.bbl
-INPUT .\lecture1.bbl
-INPUT lecture1.bbl
-INPUT .\lecture1.bbl
-INPUT .\lecture1.bbl
-INPUT lecture1.bbl
+OUTPUT template.bcf
+INPUT template.bbl
+INPUT .\template.bbl
+INPUT template.bbl
+INPUT .\template.bbl
+INPUT .\template.bbl
+INPUT template.bbl
 INPUT c:\program files\miktex_64_bit\tex\context\base\mkii\supp-pdf.mkii
 INPUT c:\program files\miktex_64_bit\tex\context\base\mkii\supp-pdf.mkii
 INPUT c:\program files\miktex_64_bit\tex\context\base\mkii\supp-pdf.mkii
@@ -798,18 +798,18 @@ INPUT c:\program files\miktex_64_bit\tex\generic\gettitlestring\gettitlestring.s
 INPUT c:\program files\miktex_64_bit\tex\generic\gettitlestring\gettitlestring.sty
 INPUT c:\program files\miktex_64_bit\tex\latex\kvoptions\kvoptions.sty
 INPUT c:\program files\miktex_64_bit\tex\generic\ltxcmds\ltxcmds.sty
-INPUT .\lecture1.out
-INPUT lecture1.out
-INPUT .\lecture1.out
-INPUT lecture1.out
-INPUT .\lecture1.out
-INPUT lecture1.out
-INPUT .\lecture1.out
-INPUT lecture1.out
-OUTPUT lecture1.pdf
-INPUT .\lecture1.out
-INPUT .\lecture1.out
-OUTPUT lecture1.out
+INPUT .\template.out
+INPUT template.out
+INPUT .\template.out
+INPUT template.out
+INPUT .\template.out
+INPUT template.out
+INPUT .\template.out
+INPUT template.out
+INPUT .\template.out
+INPUT .\template.out
+OUTPUT template.out
+OUTPUT template.pdf
 INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmr17.tfm
 INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbx12.tfm
 INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmr12.tfm
@@ -843,90 +843,20 @@ INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\joeyl\AppData\Local\MiKTeX\pdftex\config\pdftex.map
 INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmr17.tfm
 INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\lecture1.toc
-INPUT lecture1.toc
-INPUT lecture1.toc
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbx12.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmr8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmr6.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmmi12.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmmi8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmmi6.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmsy10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmsy8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmsy6.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmex10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\esint\esint10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\esint\esint10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\esint\esint10.tfm
-OUTPUT lecture1.toc
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbx8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbx6.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmmib10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\cmextra\cmmib8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\cmextra\cmmib6.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\cmextra\cmbsy8.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
-INPUT c:\program files\miktex_64_bit\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\images\\chargeinV.png
-INPUT .\images\\chargeinV.png
-INPUT images\\chargeinV.png
-INPUT .\images\\chargeinV.png
-INPUT .\images\\chargeinV.png
-INPUT .\images\\chargeinV.png
-INPUT .\images\\chargeinV.png
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\tfm\public\calligra\callig15.tfm
-INPUT lecture1.aux
-INPUT .\lecture1.out
-INPUT .\lecture1.out
-INPUT lecture1.run.xml
-OUTPUT lecture1.run.xml
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi720\esint10.pk
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi720\esint10.pk
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\calligra\dpi736\callig15.pk
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\calligra\dpi736\callig15.pk
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\calligra\dpi1104\callig15.pk
-INPUT C:\Users\joeyl\AppData\Local\MiKTeX\fonts\pk\ljfour\public\calligra\dpi1104\callig15.pk
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cmextra\cmbsy8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cmextra\cmbsy8.pfb
+INPUT .\template.toc
+INPUT template.toc
+INPUT template.toc
+OUTPUT template.toc
+INPUT template.aux
+INPUT .\template.out
+INPUT .\template.out
+INPUT template.run.xml
+OUTPUT template.run.xml
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmmib10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmmib10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT c:\program files\miktex_64_bit\fonts\type1\public\amsfonts\cm\cmti12.pfb
