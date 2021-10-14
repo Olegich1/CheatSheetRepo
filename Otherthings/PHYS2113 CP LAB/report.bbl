@@ -1,0 +1,64 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{{\em Coupled Pendula}}{n.d.}{noauthor_coupled_nodate}
+{\em Coupled Pendula}  \harvardyearleft n.d.\harvardyearright .
+\newline\harvardurl{https://repo.iitbhu.ac.in/db/2016/ir-2016-382/}
+
+\harvarditem[Harris et~al.]{Harris, Millman, van~der Walt, Gommers, Virtanen,
+  Cournapeau, Wieser, Taylor, Berg, Smith, Kern, Picus, Hoyer, van Kerkwijk,
+  Brett, Haldane, del R{\'{i}}o, Wiebe, Peterson, G{\'{e}}rard-Marchant,
+  Sheppard, Reddy, Weckesser, Abbasi, Gohlke \harvardand\
+  Oliphant}{2020}{harris2020array}
+Harris, C.~R., Millman, K.~J., van~der Walt, S.~J., Gommers, R., Virtanen, P.,
+  Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N.~J., Kern, R.,
+  Picus, M., Hoyer, S., van Kerkwijk, M.~H., Brett, M., Haldane, A., del
+  R{\'{i}}o, J.~F., Wiebe, M., Peterson, P., G{\'{e}}rard-Marchant, P.,
+  Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C. \harvardand\
+  Oliphant, T.~E.  \harvardyearleft 2020\harvardyearright , `Array programming
+  with {NumPy}', {\em Nature} {\bf 585}(7825),~357--362.
+\newline\harvardurl{https://doi.org/10.1038/s41586-020-2649-2}
+
+\harvarditem[Newville et~al.]{Newville, Otten, Nelson, Ingargiola, Stensitzki,
+  Allan, Fox, Carter, Michał, Pustakhod, lneuhaus, Weigand, Osborn, Glenn,
+  Deil, Mark, Hansen, Pasquevich, Foks, Zobrist, Frost, Beelen, Stuermer,
+  kwertyops, Polloreno, Caldwell, Almarza, Persaud, Gamari \harvardand\
+  Maier}{2021}{lmfit}
+Newville, M., Otten, R., Nelson, A., Ingargiola, A., Stensitzki, T., Allan, D.,
+  Fox, A., Carter, F., Michał, Pustakhod, D., lneuhaus, Weigand, S., Osborn,
+  R., Glenn, Deil, C., Mark, Hansen, A. L.~R., Pasquevich, G., Foks, L.,
+  Zobrist, N., Frost, O., Beelen, A., Stuermer, kwertyops, Polloreno, A.,
+  Caldwell, S., Almarza, A., Persaud, A., Gamari, B. \harvardand\ Maier, B.~F.
+  \harvardyearleft 2021\harvardyearright , `Lmfit: Non-linear least-square
+  minimization and curve-fitting for python (version 0.8.0)', {\em zenodo} .
+\newline\harvardurl{http://doi.org/10.5281/zenodo.11813}
+
+\harvarditem{Taylor}{2005}{Taylor}
+Taylor, J.~R.  \harvardyearleft 2005\harvardyearright , {\em Classical
+  Mechanics}, University Science Books.
+
+\harvarditem{UNSW}{2016}{lab_note}
+UNSW  \harvardyearleft 2016\harvardyearright , {\em Coupled Pendula}.
+
+\harvarditem[Virtanen et~al.]{Virtanen, Gommers, Oliphant, Haberland, Reddy,
+  Cournapeau, Burovski, Peterson, Weckesser, Bright, {van der Walt}, Brett,
+  Wilson, Millman, Mayorov, Nelson, Jones, Kern, Larson, Carey, Polat, Feng,
+  Moore, {VanderPlas}, Laxalde, Perktold, Cimrman, Henriksen, Quintero, Harris,
+  Archibald, Ribeiro, Pedregosa, {van Mulbregt} \harvardand\ {SciPy 1.0
+  Contributors}}{2020}{2020SciPy-NMeth}
+Virtanen, P., Gommers, R., Oliphant, T.~E., Haberland, M., Reddy, T.,
+  Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., {van
+  der Walt}, S.~J., Brett, M., Wilson, J., Millman, K.~J., Mayorov, N., Nelson,
+  A. R.~J., Jones, E., Kern, R., Larson, E., Carey, C.~J., Polat, {\.I}., Feng,
+  Y., Moore, E.~W., {VanderPlas}, J., Laxalde, D., Perktold, J., Cimrman, R.,
+  Henriksen, I., Quintero, E.~A., Harris, C.~R., Archibald, A.~M., Ribeiro,
+  A.~H., Pedregosa, F., {van Mulbregt}, P. \harvardand\ {SciPy 1.0
+  Contributors}  \harvardyearleft 2020\harvardyearright , `{{SciPy} 1.0:
+  Fundamental Algorithms for Scientific Computing in Python}', {\em Nature
+  Methods} {\bf 17},~261--272.
+
+\harvarditem{{Wolfram Research, Inc.}}{2021}{math}
+{Wolfram Research, Inc.}  \harvardyearleft 2021\harvardyearright , `Mathematica
+  12.3'.
+\newline\harvardurl{https://www.wolfram.com}
+
+\end{thebibliography}
