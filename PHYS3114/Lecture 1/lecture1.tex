@@ -106,7 +106,7 @@ we can establish the following
 \end{equation}
 Here, $G_0$ is called the \textbf{free-space Green's function}. Free-space implies that $\Phi(\vec{x}) \to 0$ as $\curly{r} \to \infty$. In other words, $G_0$ is the solution of
 \begin{equation}
-    \laplacian G(\curly{r}) = -\frac{1}{\varepsilon_0} \delta(\curly{r}) \label{eqn:Gfn5}
+    \laplacian G_0(\curly{r}) = -\frac{1}{\varepsilon_0} \delta(\curly{r}) \label{eqn:Gfn5}
 \end{equation}
 in the volume $V$, subject to the boundary condition (\ref{eqn:bcFreespace}) with $\phi_s = 0$.
 
@@ -115,7 +115,7 @@ Now, consider a collection of point charges $q_i$ at $\vec{x_i}$ where $\vec{x_i
     \laplacian \Phi_{\text{total}}(\vec{x}) = \sum_{i = 1}^{N}\laplacian\Phi(\vec{x}) = - \sum_{i = 1}^{N} \frac{q_i}{\varepsilon_0} \delta(\curly{r}),
 \end{equation}
 and the solution is
-\begin{subequations}
+\begin{subequations}\label{eqn:FreeGreenSol}
     \begin{align}
         \Phi_{\text{total}}(\vec{x}) = \sum_{i = 1}^{N} \Phi_i(\vec{x}) = \sum_{i = 1}^{N} q_i G_0 + \phi_s \\
         \implies \text{Continuum Limit} = \iiint_{V} \rho(\vec{x'}) G_0 + \phi_s \dmr{\vec{V}}.
@@ -153,8 +153,139 @@ Thus, using Eqn.~\ref{eqn:Green10} \& Eqn.~\ref{eqn:Green11}, Eqn.~\ref{eqn:Gree
 \begin{equation}
     \begin{split}
         \Phi(\vec{x}) = \iiint_V \rho(\vec{x'})G(\vec{x}, \vec{x'}) \dmr{\vec{V}} &- \varepsilon_0 \oiint_S\nabla'G(\vec{x}, \vec{x'})\Phi(\vec{x'})\cdot\dmr{\vec{S}}\\
-        &+ \varepsilon_0\oiint_S\nabla'\Phi(\vec{x'})G(\vec{x}, \vec{x'})\cdot\dmr{\vec{S}}.
+        &+ \varepsilon_0\oiint_S\nabla'\Phi(\vec{x'})G(\vec{x}, \vec{x'})\cdot\dmr{\vec{S}}. \label{eqn:GenGreenSol}
     \end{split}
 \end{equation}
 This is known as the solution for the \textbf{general Green's function}.
+
+Comparing general Green's function solution Eqn.~\ref{eqn:GenGreenSol} with the free-space case Eqn.~\ref{eqn:FreeGreenSol}, we see that in both cases the $1^{st}$ term on the RHS corresponding to the ``response" to a distribution of charges. The remaining terms correspond to the boundary conditions. In the case of Eqn.~\ref{eqn:GenGreenSol}, there are two terms associated with boundary conditions.
+
+
+\subsection{Boundary Conditions}
+
+\subsubsection{Dirichlet Boundary Conditions}
+In the case of Dirichlet BC, we specify only $\Phi(\vec{x})$ on the boundary surface $S$. An example being
+\begin{equation}
+    G(\vec{x_s}, \vec{x'}) = 0,
+\end{equation}
+where $\vec{x_s} \in S, \; \vec{x'} \in V$. So Eqn.~\ref{eqn:GenGreenSol} becomes
+\begin{equation*}
+    \Phi(\vec{x}) = \iiint_V \rho(\vec{x'})G(\vec{x}, \vec{x'}) \dmr{\vec{V}} - \varepsilon_0 \oiint_S\nabla'G(\vec{x}, \vec{x'})\Phi(\vec{x'})\cdot\dmr{\vec{S}}.
+\end{equation*}
+Furthermore, it can be shown using Green's second identity (Eqn.~\ref{eqn:G2ID}), that the Dirichlet Green's function satisfies the reciprocity theorem
+\begin{equation}
+    G(\vec{x'}, \vec{x}) = G(\vec{x}, \vec{x'}).
+\end{equation}
+
+Thus, once we have specified $\Phi(\vec{x})$ on $S$, we have an unique solution:
+\begin{equation}
+    \Phi(\vec{x} \in V) = \iiint_V \rho(\vec{x'})G(\vec{x}, \vec{x'}) \dmr{\vec{V}} - \varepsilon_0 \oiint_S\nabla'G(\vec{x}, \vec{x'})\Phi(\vec{x'})\cdot\dmr{\vec{S}}.
+\end{equation}
+The free-space Green's function (Eqn.~\ref{eqn:FreeGreenSol}) is an example of of a Dirichlet Green's function. In fact, Direchlet boundary conditions are very natural to electrostatic problems\dots
+
+\subsubsection{Neumann Boundary Conditions}
+Neumann boundary conditions involve specifying $\grad\Phi\cdot\hat{n}$ on the boudary surface $S$. They do not occur naturally in electrostatic problems. The
+
+
+\subsection{Green's Function for Magnetostatics}
+The Green's function method can also be used to calculate the magnetic vecotr potential $\vec{A}(\vec{x})$ for a given volume current density $\vec{J}(\vec{x'})$.
+
+Recall the Ampere's law,
+\begin{equation*}
+    \curl \vec{B} = \mu_0 \vec{J}.
+\end{equation*}
+And the identity that $\vec{B} = \curl \vec{A}$, we have
+\begin{equation*}
+    \curl (\curl \vec{A}) = \grad(\div \vec{A}) - \laplacian \vec{A} = \mu_0 \vec{J}.
+\end{equation*}
+Now, imposing the Coloumb gaguge conditions
+\begin{equation}
+    \laplacian \vec{A} = -mu_0 \vec{J},
+\end{equation}
+we obtain at the following 3 Possion-like equations
+\begin{subequations}
+    \begin{align}
+        \laplacian \vec{A}_x & = -\mu_0 \vec{J}_x, \\
+        \laplacian \vec{A}_y & = -\mu_0 \vec{J}_y, \\
+        \laplacian \vec{A}_z & = -\mu_0 \vec{J}_z.
+    \end{align}
+\end{subequations}
+Each of these can be solved using the Green's function method in exactly the same way as we solve for $\Phi(\vec{x})$. In particular, the free-space Green's function is
+\begin{equation}
+    G_0(\vec{x}, \vec{x'}) = \frac{\mu_0}{4\pi}\frac{1}{\abs{\vec{x}-\vec{x'}}}.
+\end{equation}
+Which leads to a solution (Note that $\vec{A}(\vec{x}) \to \vec{A}_s \text{ as } \abs{\vec{x} - \vec{x'}} \to \infty$)
+\begin{equation}
+    \vec{A}(\vec{x}) = \iiint_V \vec{J}(\vec{x'}) G_0(\vec{x}, \vec{x'}) + \vec{A}_s \dmr{V}.
+\end{equation}
+
+
+
+\section{Green's Function in Time-Dependent Problems}
+
+
+\subsection{Inhomogeneous Wave Equation}
+We have seen before that Maxwell's equations can be written in terms of the scalar and vector potential $\Phi$ and $\vec{A}$ as:
+\begin{equation*}
+    \laplacian \vec{A} - \mu_0\varepsilon_0 \pdv[2]{A}{t} = -\mu_0 \vec{J} + \grad(\div \vec{A} + \mu_0\epsilon_0 \pdv{\Phi}{t})
+\end{equation*}
+Recall that the \textbf{Lorenz gauge} imposes that
+\begin{equation*}
+    \div \vec{A} + \mu_0\epsilon_0 \pdv{\Phi}{t} = 0.
+\end{equation*}
+So that the above equations simplifies to (Note that $c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}$)
+\begin{subequations}
+    \begin{align}
+        \laplacian \vec{A}_L - \frac{1}{c^2}\pdv[2]{\vec{A}_L}{t} & = -\mu_0\vec{J}               ,\\
+        \laplacian \Phi_L -\frac{1}{c^2}\pdv[2]{\Phi_L}{t}        & = -\frac{\rho}{\varepsilon_0}.
+    \end{align}
+\end{subequations}
+
+Note that these equations are of the form
+\begin{equation}
+    \left(\laplacian - \frac{1}{c^2} \pdv{t}\right)\Psi(\vec{x},t) = -f(\vec{x},t), \label{eqn:inhoWaveEqn}
+\end{equation}
+where the LHS represents the propagation of a wave of speed $c$, and the RHS represents the source of the wave. This is also called the \textbf{inhomogeneous wave equation}, and is our starting point in this section. We wish to find $\Psi(\vec{x},t)$ in volume $V$ between time $t_1$ and $t_2$ subject to boundary and intial condtions.
+
+
+\subsection{Solution Strategy}
+Let us first contrast the static an time-dependent case.
+
+\begin{center}
+    \begin{tabular}{c | c}
+        Static case (Coloumb gauge) & $\laplacian \Psi(\vec{x}) = -f(\vec{x})$\\[2ex]
+        \hline\\
+        Dynamic case (Lorenz gauge) & $\left(\laplacian - \frac{1}{c^2}\pdv[2]{t} \right)\Psi(\vec{x},t) = -f(\vec{x},t)$
+    \end{tabular}
+\end{center}
+Thus, formally, the only difference between the static and time-dependent systems is that the former involves a 3D Laplacian operator $\laplacian$ acting on $\Psi(\vec{x})$, where as the latter involves a 4D d'Alembertian operator $\square \equiv \laplacian - \frac{1}{c^2}\pdv[2]{t}$ acting on $\Psi(\vec{x}, t)$.
+
+Therefore, to solve Eqn.~\ref{eqn:inhoWaveEqn}, we can simply reuse what we have found before for the static case and make the following replacement:
+\begin{subequations}
+    \begin{align}
+        &\laplacian \to \square, \\
+        &f(\vec{x}) \to f(\vec{x}, t),\dmr{\vec{V}} \to \mathrm{d}\vec{V}\mathrm{d}t,\\
+        &\delta(\vec{x}-\vec{x'}) \to \delta(\vec{x}-\vec{x'})\delta(t-t').
+    \end{align}
+\end{subequations}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
