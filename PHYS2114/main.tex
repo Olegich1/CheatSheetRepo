@@ -42,7 +42,9 @@
 
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 \DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.3]callig15}{}
-\newcommand{\curly}[1]{\ensuremath{\mathcalligra{#1}}}
+\newcommand{\curly}[1]{\ensuremath{\mathcalligra{#1}\,}}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\bfscriptr}{\pmb{\mathcalligra{r}}\,}
 
 \let\oldhat\hat
 \renewcommand{\vec}[1]{\mathbf{#1}}
