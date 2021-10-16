@@ -23,8 +23,8 @@
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0em}
 %_____________
-\newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d (hehe)
-\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy integral command
+\newcommand{\dmr}[1]{\, \mathrm{d}#1} %command for the straight d after the integral
+\newcommand{\intt}[2]{\int_{#1}^{#2}} %easy integral command 
 %_____________
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 \DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.3]callig15}{}
@@ -236,7 +236,7 @@ Recall that the \textbf{Lorenz gauge} imposes that
 So that the above equations simplifies to (Note that $c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}$)
 \begin{subequations}
     \begin{align}
-        \laplacian \vec{A}_L - \frac{1}{c^2}\pdv[2]{\vec{A}_L}{t} & = -\mu_0\vec{J}               ,\\
+        \laplacian \vec{A}_L - \frac{1}{c^2}\pdv[2]{\vec{A}_L}{t} & = -\mu_0\vec{J}               , \\
         \laplacian \Phi_L -\frac{1}{c^2}\pdv[2]{\Phi_L}{t}        & = -\frac{\rho}{\varepsilon_0}.
     \end{align}
 \end{subequations}
@@ -253,8 +253,8 @@ Let us first contrast the static an time-dependent case.
 
 \begin{center}
     \begin{tabular}{c | c}
-        Static case (Coloumb gauge) & $\laplacian \Psi(\vec{x}) = -f(\vec{x})$\\[2ex]
-        \hline\\
+        Static case (Coloumb gauge) & $\laplacian \Psi(\vec{x}) = -f(\vec{x})$                                            \\[2ex]
+        \hline                                                                                                            \\
         Dynamic case (Lorenz gauge) & $\left(\laplacian - \frac{1}{c^2}\pdv[2]{t} \right)\Psi(\vec{x},t) = -f(\vec{x},t)$
     \end{tabular}
 \end{center}
@@ -263,18 +263,35 @@ Thus, formally, the only difference between the static and time-dependent system
 Therefore, to solve Eqn.~\ref{eqn:inhoWaveEqn}, we can simply reuse what we have found before for the static case and make the following replacement:
 \begin{subequations}
     \begin{align}
-        &\laplacian \to \square, \\
-        &f(\vec{x}) \to f(\vec{x}, t),\dmr{\vec{V}} \to \mathrm{d}\vec{V}\mathrm{d}t,\\
-        &\delta(\vec{x}-\vec{x'}) \to \delta(\vec{x}-\vec{x'})\delta(t-t').
+         & \laplacian \to \square,                                                      \\
+         & f(\vec{x}) \to f(\vec{x}, t),\dmr{\vec{V}} \to \mathrm{d}\vec{V}\mathrm{d}t, \\
+         & \delta(\vec{x}-\vec{x'}) \to \delta(\vec{x}-\vec{x'})\delta(t-t').
     \end{align}
 \end{subequations}
 
+The Green's function in the dynamic case is similar to to its static case cousin, where
+\begin{equation}
+    \square G(\vec{x}, \vec{x'} | t, t') = -\delta(\vec{x} - \vec{x'})\delta(t- t').
+\end{equation}
 
-
-
-
-
-
+Recall that the Green's second identity
+\begin{equation}
+    \iiint_V \big[\Psi(\vec{x'}) \nabla^{'2} G - G \nabla^{'2} \Psi(\vec{x'})\big] \dmr{\vec{V}} = \oiint_S \big[\Psi(\vec{x'})\grad'G - G\grad'\Psi(\vec{x'})\big] \cdot \dmr{\vec{S}}, \tag{$\bigpumpkin$}
+\end{equation}
+The left LHS of $\bigpumpkin$ now generalises to (Note that $\Psi_{st} \equiv \Psi(\vec{x'}, t'); \; \text{and} \; G_{st} \equiv G(\vec{x}, \vec{x'}|t, t')$ here for the sake of simplicity (ST stands for space time for those who are curious))
+\begin{equation*}
+    \intt{t_1}{t_2}\dmr{t'} \iiint_V \big[ \Psi_{st} \square' G_{st} - G_{st} \square' \Psi_{st} \big]\dmr{\vec{V}}. \tag{$\mathwitch$}
+\end{equation*}
+Now, applying the definition of the $\square$ operator on $\mathwitch$
+\begin{equation*}
+    \implies \intt{t_1}{t_2}\dmr{t'}\underbrace{\iiint_V\big[ \Psi_{st} \nabla^{'2}G_{st} - G_{st} \nabla^{'2} \Psi_{st} \big]\dmr{\vec{V}}}_{\heartsuit} - \frac{1}{c^2}\underbrace{\intt{t_1}{t_2}\dmr{t'}\iiint_V \left[\Psi_{st} \frac{\partial^2G_{st}}{\partial t^{'2}} - G_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}} \right]\dmr{\vec{V}}}_{\clubsuit}.
+\end{equation*}
+Furthermore, using $\bigpumpkin$ on $\heartsuit$, and performing the temporal integral on $\clubsuit$, we arrive at
+\small
+\begin{equation}
+    \mathwitch = \intt{t_1}{t_2}\dmr{t'}\oiint_S\left(\Psi_{st} \grad' G_{st} - G_{st} \grad' \Psi_{st}\right)\dmr{\vec{V}} - \frac{1}{c^2}\iiint_V\left[\Psi_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}} - G_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}}\right]_{t_1}^{t_2}\dmr{\vec{V}}.
+\end{equation}
+\normalsize
 
 
 
