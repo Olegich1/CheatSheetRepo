@@ -9,7 +9,7 @@
 \usepackage[backend=biber, citestyle=nature]{biblatex}
 \usepackage[nottoc]{tocbibind}
 \usepackage{indentfirst, halloweenmath, calligra, %
-            esint, graphicx, hyperref, xcolor, float}
+            esint, graphicx, hyperref, xcolor, float, pifont}
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
   urlcolor     = blue, %Colour for external hyperlinks
@@ -200,7 +200,7 @@ And the identity that $\vec{B} = \curl \vec{A}$, we have
 \end{equation*}
 Now, imposing the Coloumb gaguge conditions
 \begin{equation}
-    \laplacian \vec{A} = -mu_0 \vec{J},
+    \laplacian \vec{A} = -\mu_0 \vec{J},
 \end{equation}
 we obtain at the following 3 Possion-like equations
 \begin{subequations}
@@ -292,16 +292,41 @@ Furthermore, using $\bigpumpkin$ on $\heartsuit$, and performing the temporal in
     \mathwitch = \intt{t_1}{t_2}\dmr{t'}\oiint_S\left(\Psi_{st} \grad' G_{st} - G_{st} \grad' \Psi_{st}\right)\dmr{\vec{V}} - \frac{1}{c^2}\iiint_V\left[\Psi_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}} - G_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}}\right]_{t_1}^{t_2}\dmr{\vec{V}}.
 \end{equation}
 \normalsize
+Then, by analogy with the general Green's function solution (Eqn.~\ref{eqn:GenGreenSol}) in the static case, we find
+\begin{equation}
+    \begin{split}
+        &\Psi_{st}(\vec{x'}, t) = \overbrace{\intt{t_1}{t_2}\dmr{t'}\iiint_V f(\vec{x'}, t) G_{st}}^{\text{\ding{192}}} \\
+        &- \underbrace{\intt{t_1}{t_2}\dmr{t'}\oiint_S \left( \Psi_{st}\grad' G_{st} - G_{st}\grad'\Psi_{st} \right)\cdot\dmr{\vec{S}}}_{\text{\ding{193}}} + \underbrace{\frac{1}{c^2}\iiint_V \left[\Psi_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}} - G_{st} \frac{\partial^2 G_{st}}{\partial t^{'2}}\right]_{t_1}^{t_2}\dmr{\vec{V}}}_{\text{\ding{194}}}\label{eqn:GenDyGreenSol}
+    \end{split}
+\end{equation}
+Where in Eqn.~\ref{eqn:GenDyGreenSol}, \ding{192} is the ``linear response'' of the system to a source $f(\vec{x'}, t)$, \ding{193} represents the spatial boundary condtions that is evaluated on the surface $S$ of the volume $V$, and \ding{194} represents the temporal boundary conditions evaluated at time $t_1$ at $t_2$ in the volume $V$. This is known as the \textbf{general Green's function solution in the time-dependent case}, and it is the formal solution for Eqn.~\ref{eqn:inhoWaveEqn}.
 
 
+\subsection{Free-Space Boundary Conditions}
+Let us now apply Eqn.~\ref{eqn:GenDyGreenSol} to the free-space boundary conditions case. Mathematically speaking, we wish to find a solution to
+\begin{equation}
+    \square \Psi_{st} = -f(\vec{x}, t)
+\end{equation}
+or equivalently,
+\begin{equation*}
+    \left( \laplacian - \frac{1}{c^2} \pdv[2]{t} \right)G_{st} = -\delta(\vec{x}-\vec{x'})\delta(t - t')
+\end{equation*}
+in volume $V$ between time $t_1$ and $t_2$, subject to the BC that
+\begin{equation*}
+    \Psi_{st} \to 0 \text{ as } \abs{\vec{x} - \vec{x'}} \to \infty,
+\end{equation*}
+or equivalently
+\begin{equation}
+    G_{st} \to 0 \text{ as } \abs{\vec{x} - \vec{x'}} \to \infty.
+\end{equation}
 
-
-
-
-
-
-
-
+This is most easily solved by first recognising that the Dirac Delta functions can be written the following Fourier transforms
+\begin{subequations}
+    \begin{align}
+        \delta(t - t')             & = \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-i\omega(t-t')}\dmr{\omega},                          \\
+        \delta(\vec{x} - \vec{x'}) & = \frac{1}{(2\pi)^3}\iiint_{-\infty}^{\infty}e^{-i\vec{K}\cdot(\vec{x}-\vec{x'})}\dmr{\vec{K}}.
+    \end{align}
+\end{subequations}
 
 
 
